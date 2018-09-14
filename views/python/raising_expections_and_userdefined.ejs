@@ -1,0 +1,141 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> Handling runtime errors - Exception Handling</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Exceptions</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+
+						<p ><a href="/python/exception" title="Exception">13.1. Exception</a></p>
+                        <p><a href="/python/raising_expections_and_userdefined" style="color:#356BC3;" title="Raising exceptions and User defined Exceptions">13.2. Raising exceptions and User defined Exceptions</a></p>
+						<p><a href="/python/problem_statement_7" title="Problem statement">13.3. Problem statement</a></p>
+						<p><a href="/python/pp_12" title="Practise Problems">13.4. Practise Problems</a></p>
+
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">13.2. Raising exceptions and User defined Exceptions </small> </h3>
+						<hr>
+                  <p><strong>Raising exceptions</strong></p>
+
+<p>You can raise exceptions in several ways by using the raise statement. The general syntax for the raise statement.</p>
+
+<p><strong>SYNTAX:</strong><br>
+raise [Exception [, args [, traceback]]]</p>
+
+<p>Here, Exception is the type of exception (for example, NameError) and argument is a value for the exception argument. The argument is optional; if not supplied, the exception argument is None.</p>
+
+<p>The final argument, traceback, is also optional (and rarely used in practice), and if present, is the traceback object used for the exception.</p>
+
+<p><strong>EXAMPLE:</strong> An exception can be a string, a class or an object. Most of the exceptions that the Python core raises are classes, with an argument that is an instance of the class. Defining new exceptions is quite easy and can be done as follows:</p>
+
+<p>#!/usr/bin/python<br>
+def functionName( level ):<br>
+&nbsp;&nbsp; if level &lt; 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise "Invalid level!", level<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # The code below to this would not be executed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # if we raise the exception</p>
+
+<p>Note: In order to catch an exception, an "except" clause must refer to the same exception thrown either class object or simple string. For example, to capture above exception, we must write our except clause as follows:</p>
+
+<p>try:<br>
+&nbsp;&nbsp; Business Logic here...<br>
+except "Invalid level!":<br>
+&nbsp;&nbsp; Exception handling here...<br>
+else:<br>
+&nbsp;&nbsp; Rest of the code here...</p>
+
+<p><strong>User-defined exceptions</strong></p>
+
+<p>Python also allows you to create your own exceptions by deriving classes from the standard built-in exceptions.</p>
+
+<p>Here is an example related to RuntimeError.</p>
+
+<p>Here, a class is created that is sub classed from RuntimeError.</p>
+
+<p>This is useful when you need to display more specific information when an exception is caught.</p>
+
+<p>In the try block, the user-defined exception is raised and caught in the except block. The variable e is used to create an instance of the class Networkerror.<br>
+class Networkerror(RuntimeError):<br>
+&nbsp;&nbsp; def __init__(self, arg):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.args = arg</p>
+
+<p>So once you defined above class, you can raise your exception as follows:</p>
+
+<p>try:<br>
+&nbsp;&nbsp; raise Networkerror("Bad hostname")<br>
+except Networkerror,e:<br>
+&nbsp;&nbsp; print e.args</p>
+
+               
+                  <div class="pull-left">
+                    <a href="/python/exception" title="Exception"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Exception</div></span></a>
+                    <a href="/python/exception" title="Exception"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_7" title="Problem statement "><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement </div> </a>
+                    <a href="/python/problem_statement_7" title="Problem statement "><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

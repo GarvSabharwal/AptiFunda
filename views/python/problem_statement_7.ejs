@@ -1,0 +1,109 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> Handling runtime errors - Exception Handling</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Exceptions</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+ 
+						<p ><a href="/python/exception" title="Exception">13.1. Exception</a></p>
+                        <p><a href="/python/raising_expections_and_userdefined" title="Raising exceptions and User defined Exceptions">13.2. Raising exceptions and User defined Exceptions</a></p>
+						<p><a href="/python/problem_statement_7" style="color:#356BC3;" title="Problem statement">13.3. Problem statement</a></p>
+						<p><a href="/python/pp_12" title="Practise Problems">13.4. Practise Problems</a></p>
+
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">13.3. Problem Statement</small>
+                    </h3>
+				<hr>
+                  <p>Write a program to find reciprocal of x and it shouldn't show any error for any input value.</p>
+
+<p><strong>Solution</strong><br>
+#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp;&nbsp; x = float(raw_input("Your number: "))<br>
+&nbsp;&nbsp;&nbsp; inverse = 1.0 / x<br>
+&nbsp;&nbsp;&nbsp; print inverse<br>
+except ValueError:<br>
+&nbsp;&nbsp;&nbsp; print "You should have given either an int or a float"<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;&nbsp; print "Infinity"</p>
+
+<p>&nbsp;</p>
+
+               
+                  <div class="pull-left">
+                    <a href="/python/raising_exceptions_and_userdefined" title="Raising exceptions and User defined Exceptions"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Raising exceptions and User defined Exceptions</div></span></a>
+                    <a href="/python/raising_exceptions_and_userdefined" title="Raising exceptions and User defined Exceptions"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/pp_12" title="Practise Problems"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/python/pp_12" title="Practise Problems"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+   </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+

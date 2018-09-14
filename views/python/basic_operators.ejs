@@ -1,0 +1,416 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python -->  5. Operators supported for Data manipulation and Comparison</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">5.1. Basic operators</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+
+
+
+ <p ><a style="color:#356BC3" href="/python/basic_operators" title="Basic operators"><strong>5.1. Basic operators</strong></a></p>
+ <p><a href="/python/operator_precedence" title="Operator precedence">5.2. Operator precedence</a></p>
+                        <p><a href="/python/pp_4" title="Practise Problems">5.3. Practise Problems</a></p>
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 5.1. Basic operators </small>
+                    </h3>
+				<hr>                  <p><strong>What is an operator?</strong></p>
+
+<p>Simple answer can be given using expression 2 + 3 is equal to 5. Here, 2 and 3 are called operands and + is called operator. Python language supports the following types of operators.</p>
+
+<p><strong>1. Arithmetic operators</strong><br>
+Assume variable a holds 10 and variable b holds 20, then:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1.png" alt="Arthmetic Operators" style="height:299px; width:614px"></amp-img></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Try the following example to understand all the arithmetic operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 21<br>
+b = 10<br>
+c = 0</p>
+
+<p>c = a + b<br>
+print "Line 1 - Value of c is ", c</p>
+
+<p>c = a - b<br>
+print "Line 2 - Value of c is ", c</p>
+
+<p>c = a * b<br>
+print "Line 3 - Value of c is ", c</p>
+
+<p>c = a / b<br>
+print "Line 4 - Value of c is ", c</p>
+
+<p>c = a % b<br>
+print "Line 5 - Value of c is ", c</p>
+
+<p>a = 2<br>
+b = 3<br>
+c = a**b<br>
+print "Line 6 - Value of c is ", c</p>
+
+<p>a = 10<br>
+b = 5<br>
+c = a//b<br>
+print "Line 7 - Value of c is ", c</p>
+
+<p>When you execute the above program, it produces the following result:</p>
+
+<p>Line 1 - Value of c is 31<br>
+Line 2 - Value of c is 11<br>
+Line 3 - Value of c is 210<br>
+Line 4 - Value of c is 2<br>
+Line 5 - Value of c is 1<br>
+Line 6 - Value of c is 8<br>
+Line 7 - Value of c is 2</p>
+
+<p><strong>2. Relational operators</strong></p>
+
+<p>Relational (comparison) operators always return a boolean result that indicates whether some relationship holds between their operands. Most relational operators are symbols ( == != &lt; &gt; &lt;= &gt;= )The table below lists the relational operators and their descriptions.</p>
+
+<p>Assume variable a holds 10 and variable b holds 20, then:</p>
+
+<p><strong>Example:</strong></p>
+
+<p>Try following example to understand all the relational operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 21<br>
+b = 10<br>
+c = 0</p>
+
+<p>if ( a == b ):<br>
+&nbsp;&nbsp; print "Line 1 - a is equal to b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 1 - a is not equal to b"</p>
+
+<p>if ( a != b ):<br>
+&nbsp;&nbsp; print "Line 2 - a is not equal to b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 2 - a is equal to b"</p>
+
+<p>if ( a &lt;&gt; b ):<br>
+&nbsp;&nbsp; print "Line 3 - a is not equal to b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 3 - a is equal to b"</p>
+
+<p>if ( a &lt; b ):<br>
+&nbsp;&nbsp; print "Line 4 - a is less than b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 4 - a is not less than b"</p>
+
+<p>if ( a &gt; b ):<br>
+&nbsp;&nbsp; print "Line 5 - a is greater than b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 5 - a is not greater than b"</p>
+
+<p>a = 5;<br>
+b = 20;<br>
+if ( a &lt;= b ):<br>
+&nbsp;&nbsp; print "Line 6 - a is either less than or equal to&nbsp; b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 6 - a is neither less than nor equal to&nbsp; b"</p>
+
+<p>if ( b &gt;= a ):<br>
+&nbsp;&nbsp; print "Line 7 - b is either greater than&nbsp; or equal to b"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 7 - b is neither greater than&nbsp; nor equal to b"</p>
+
+<p><br>
+When you execute the above program it produces the following result:<br>
+Line 1 - a is not equal to b<br>
+Line 2 - a is not equal to b<br>
+Line 3 - a is not equal to b<br>
+Line 4 - a is not less than b<br>
+Line 5 - a is greater than b<br>
+Line 6 - a is either less than or equal to b<br>
+Line 7 - b is either greater than or equal to b</p>
+
+<p><strong>3. Assignment operators</strong></p>
+
+<p>Assume variable a holds 10 and variable b holds 20, then:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1(1).png" alt="Assignment operators" style="height:412px; width:656px"></amp-img></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Try following example to understand all the assignment operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 21<br>
+b = 10<br>
+c = 0</p>
+
+<p>c = a + b<br>
+print "Line 1 - Value of c is ", c</p>
+
+<p>c += a<br>
+print "Line 2 - Value of c is ", c</p>
+
+<p>c *= a<br>
+print "Line 3 - Value of c is ", c</p>
+
+<p>c /= a<br>
+print "Line 4 - Value of c is ", c</p>
+
+<p>c&nbsp; = 2<br>
+c %= a<br>
+print "Line 5 - Value of c is ", c</p>
+
+<p>c **= a<br>
+print "Line 6 - Value of c is ", c</p>
+
+<p>c //= a<br>
+print "Line 7 - Value of c is ", c<br>
+When you execute the above program, it produces the following result:<br>
+Line 1 - Value of c is 31<br>
+Line 2 - Value of c is 52<br>
+Line 3 - Value of c is 1092<br>
+Line 4 - Value of c is 52<br>
+Line 5 - Value of c is 2<br>
+Line 6 - Value of c is 2097152<br>
+Line 7 - Value of c is 99864</p>
+
+<p><strong>4. Bitwise operators</strong></p>
+
+<p>Bitwise operator works on bits and perform bit by bit operation. Assume if a = 60; and b = 13; Now in binary format they will be as follows:<br>
+a = 0011 1100<br>
+b = 0000 1101<br>
+-----------------<br>
+a&amp;b = 0000 1100<br>
+a|b = 0011 1101<br>
+a^b = 0011 0001<br>
+~a&nbsp; = 1100 0011</p>
+
+<p>There are following Bitwise operators supported by Python language:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1(2).png" alt="Bitwise operators" style="height:292px; width:608px"></amp-img></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Try following example to understand all the bitwise operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 60 = 0011 1100<br>
+b = 13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 13 = 0000 1101<br>
+c = 0</p>
+
+<p>c = a &amp; b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 12 = 0000 1100<br>
+print "Line 1 - Value of c is ", c</p>
+
+<p>c = a | b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 61 = 0011 1101<br>
+print "Line 2 - Value of c is ", c</p>
+
+<p>c = a ^ b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 49 = 0011 0001<br>
+print "Line 3 - Value of c is ", c</p>
+
+<p>c = ~a;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # -61 = 1100 0011<br>
+print "Line 4 - Value of c is ", c</p>
+
+<p>c = a &lt;&lt; 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 240 = 1111 0000<br>
+print "Line 5 - Value of c is ", c</p>
+
+<p>c = a &gt;&gt; 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 15 = 0000 1111<br>
+print "Line 6 - Value of c is ", c</p>
+
+<p>When you execute the above program it produces the following result:</p>
+
+<p>Line 1 - Value of c is 12<br>
+Line 2 - Value of c is 61<br>
+Line 3 - Value of c is 49<br>
+Line 4 - Value of c is -61<br>
+Line 5 - Value of c is 240<br>
+Line 6 - Value of c is 15</p>
+
+<p><strong>5. Logical operators</strong></p>
+
+<p>There are following logical operators supported by Python language. Assume variable a holds 10 and variable b holds 20 then:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1(3).png" alt="logical operators" style="height:154px; width:677px"></amp-img></p>
+
+<p>Example:</p>
+
+<p>Try the following example to understand all the logical operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 10<br>
+b = 20<br>
+c = 0</p>
+
+<p>if ( a and b ):<br>
+&nbsp;&nbsp; print "Line 1 - a and b are true"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 1 - Either a is not true or b is not true"</p>
+
+<p>if ( a or b ):<br>
+&nbsp;&nbsp; print "Line 2 - Either a is true or b is true or both are true"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 2 - Neither a is true nor b is true"</p>
+
+<p><br>
+a = 0<br>
+if ( a and b ):<br>
+&nbsp;&nbsp; print "Line 3 - a and b are true"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 3 - Either a is not true or b is not true"</p>
+
+<p>if ( a or b ):<br>
+&nbsp;&nbsp; print "Line 4 - Either a is true or b is true or both are true"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 4 - Neither a is true nor b is true"</p>
+
+<p>if not( a and b ):<br>
+&nbsp;&nbsp; print "Line 5 - Either a is not true or b is not true"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 5 - a and b are true"</p>
+
+<p>When you execute the above program it produces the following result:</p>
+
+<p>Line 1 - a and b are true<br>
+Line 2 - Either a is true or b is true or both are true<br>
+Line 3 - Either a is not true or b is not true<br>
+Line 4 - Either a is true or b is true or both are true<br>
+Line 5 - Either a is not true or b is not true</p>
+
+<p><strong>6. Membership operators</strong><br>
+In addition to the operators discussed previously, Python has membership operators, which test for membership in a sequence, such as strings, lists, or tuples. There are two membership operators explained below:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1(5).png" alt="Membership operators" style="height:133px; width:676px"></amp-img></p>
+
+<p>Example:<br>
+Try following example to understand all the membership operators available in Python programming language:</p>
+
+<p>#!/usr/bin/python<br>
+a = 10<br>
+b = 20<br>
+list = [1, 2, 3, 4, 5 ];</p>
+
+<p>if ( a in list ):<br>
+&nbsp;&nbsp; print "Line 1 - a is available in the given list"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 1 - a is not available in the given list"</p>
+
+<p>if ( b not in list ):<br>
+&nbsp;&nbsp; print "Line 2 - b is not available in the given list"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 2 - b is available in the given list"</p>
+
+<p>a = 2<br>
+if ( a in list ):<br>
+&nbsp;&nbsp; print "Line 3 - a is available in the given list"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 3 - a is not available in the given list"</p>
+
+<p>When you execute the above program it produces the following result:<br>
+Line 1 - a is not available in the given list<br>
+Line 2 - b is not available in the given list<br>
+Line 3 - a is available in the given list</p>
+
+<p><strong>7. Identity operators</strong><br>
+Identity operators compare the memory locations of two objects. There are two Identity operators explained below:</p>
+
+<p style="text-align: center;"><amp-img src="../../../img/python_images/5.1 Basic Operators/content_1(5).png" alt="Identity operators" style="height:133px; width:679px"></amp-img></p>
+
+<p>Example:<br>
+Try following example to understand all the identity operators available in Python programming language:<br>
+#!/usr/bin/python<br>
+a = 20<br>
+b = 20</p>
+
+<p>if ( a is b ):<br>
+&nbsp;&nbsp; print "Line 1 - a and b have same identity"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 1 - a and b do not have same identity"</p>
+
+<p>if ( id(a) == id(b) ):<br>
+&nbsp;&nbsp; print "Line 2 - a and b have same identity"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 2 - a and b do not have same identity"</p>
+
+<p>b = 30<br>
+if ( a is b ):<br>
+&nbsp;&nbsp; print "Line 3 - a and b have same identity"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 3 - a and b do not have same identity"</p>
+
+<p>if ( a is not b ):<br>
+&nbsp;&nbsp; print "Line 4 - a and b do not have same identity"<br>
+else:<br>
+&nbsp;&nbsp; print "Line 4 - a and b have same identity"</p>
+
+<p>When you execute the above program it produces the following result:</p>
+
+<p>Line 1 - a and b have same identity<br>
+Line 2 - a and b have same identity<br>
+Line 3 - a and b do not have same identity<br>
+Line 4 - a and b do not have same identity</p>
+
+               
+               <div class="pull-right">
+                    <a href="/python/operator_precedence" title="operator presedence"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/python/operator_precedence" title="operator presedence"><div class="btn btn-default btn- pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

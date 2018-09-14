@@ -1,0 +1,231 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Importing Blocks and Code Modules</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Import Statement</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+          
+          
+          
+          
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/import_statement" style="color:#356BC3;" title="Import Statement">11.1. Import Statement</a>
+                </p>
+               
+                <p>
+                  <a href="/python/problem_statement_5" title="Problem statement">11.2. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_10" title="Practise Problems">11.3. Practise Problems</a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 11.1. Import Statement </small> </h3>
+            <hr>
+                  <p>The basic purpose of the import statement is to:</p>
+
+<ul>
+	<li>&nbsp; Identify one of the following items</li>
+	<li>&nbsp; An ordinary module</li>
+	<li>&nbsp; A package</li>
+	<li>&nbsp; A module within a package</li>
+	<li>&nbsp; An attribute of a module or package</li>
+</ul>
+
+<p>Bind information about this external item to a variable local to the current module.</p>
+
+<p>Code in the current module will then use this local-module variable to interact with the external item</p>
+
+<p>Python provides at least three different ways to import modules. You can use the import statement, the from statement, or the built-in__import__function.</p>
+
+<p>These are:</p>
+
+<ul>
+	<li>import x -- imports the module X, and creates a reference to that module in the current namespace. x may be a module or package</li>
+	<li>from x import b – imports the module X, and creates references in the current namespace to the given objects. Or in other words, you can now use a in your program. x may be a module or package; b can be a contained module or object (class, function etc.)</li>
+	<li>From x import * -&nbsp; imports the module X, and creates references in the current namespace to all public objects defined by that module</li>
+	<li>Finally, X = __import__(‘X’) works like import X, with the difference that you</li>
+</ul>
+
+<p>1) pass the module name as a string,<br>
+and 2) explicitly assign it to a variable in your current namespace.</p>
+
+<p><u><strong>Import statement</strong></u><br>
+You can use any Python source file as a module by executing an import statement in some other Python source file. The import has the following syntax:</p>
+
+<p>import module1[, module2[,... moduleN]</p>
+
+<p>When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of directories that the interpreter searches before importing a module. For example, to import the module hello.py, you need to put the following command at the top of the script:</p>
+
+<p>Here's an example of a simple module, hello..py<br>
+#!/usr/bin/python<br>
+def print_func( par ):<br>
+&nbsp;&nbsp; print "Hello : ", par<br>
+&nbsp;&nbsp; return</p>
+
+<p>now if we want to use this in another program then we can just write as below:</p>
+
+<p># Import module support<br>
+import support</p>
+
+<p># Now you can call defined function that module as follows<br>
+support.print_func("Sarah")</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Hello : Sarah</p>
+
+<p>A module is loaded only once, regardless of the number of times it is imported. This prevents the module execution from happening over and over again if multiple imports occur.</p>
+
+<p><strong>Example:</strong><br>
+vi mod.py<br>
+#!/usr/bin/python<br>
+def func():<br>
+&nbsp; print "This is sample function"<br>
+vi mod1.py<br>
+#!/usr/bin/python<br>
+#Importing the module mod.py<br>
+import mod<br>
+mod.func()</p>
+
+<p>After execution of mod1.py as python mod1.py the output will be:<br>
+This is sample function</p>
+
+<p><u><strong>From...import statement</strong></u></p>
+
+<p>Python's from statement lets you import specific attributes from a module into the current namespace. The from...import has the following syntax:</p>
+
+<p>from modname import name1[, name2[, ... nameN]]</p>
+
+<p>For example, to import the function fibonacci from the module fib, use the following statement:<br>
+from fib import fibonacci</p>
+
+<p>This statement does not import the entire module fib into the current namespace; it just introduces the item fibonacci from the module fib into the global symbol table of the importing module.</p>
+
+<p><strong>Example:</strong><br>
+vi mod2.py<br>
+#!/usr/bin/python<br>
+from mod import func<br>
+func()</p>
+
+<p>After execution of mod2.py as python mod2.py the output will be:<br>
+This is sample function</p>
+
+<p><u><strong>From...import * statement</strong></u><br>
+It is also possible to import all names from a module into the current namespace by using the following import statement:<br>
+from modname import *</p>
+
+<p>This provides an easy way to import all the items from a module into the current namespace.</p>
+
+<p><strong>Example:</strong><br>
+vi mod3.py<br>
+from mod import *<br>
+func()</p>
+
+<p>It will import every function from module into the current namespace.</p>
+
+<p><u><strong>dir() function:</strong></u></p>
+
+<p>The dir() built-in function returns a sorted list of strings containing the names defined by a module.</p>
+
+<p>The list contains the names of all the modules, variables and functions that are defined in a module. Following is a simple example:</p>
+
+<p>#!/usr/bin/python<br>
+# Import built-in module math<br>
+import math<br>
+content = dir(math)<br>
+print content;</p>
+
+<p>When the above code is executed, it produces the following result:</p>
+
+<p>['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan',<br>
+'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',<br>
+'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',<br>
+'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',<br>
+'sqrt', 'tan', 'tanh']</p>
+
+<p>Here, the special string variable __name__ is the module's name, and __file__ is the filename from which the module was loaded.</p>
+
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_5" title="Problem statement"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement</div> </a>
+                    <a href="/python/problem_statement_5" title="Problem statement"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

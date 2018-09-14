@@ -1,0 +1,157 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Modularity and Code reusability – Functions</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Functions in Python</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/functions_in_python" title="Functions in Python">10.1. Functions in Python</a>
+                </p>
+                <p>
+                  <a href="/python/pass_by_refrence" style="color:#356BC3;" title="Pass by reference">10.2. Pass by reference</a>
+                </p>
+                <p>
+                  <a href="/python/function_arguments" title="Function arguments">10.3. Function arguments</a>
+                </p>
+                <p>
+                  <a href="/python/return_statement_scope_variables" title="Return statement and Scope of Variables">10.4. Return statement and Scope of Variables</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_4" title="Problem statement">10.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_9" title="Practise Problems">10.6. Practise Problems</a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 10.2. Pass by reference </small> </h3>
+            <hr>
+                  <p>All parameters (arguments) in the Python language are passed by reference. It means if you change what a parameter refers to within a function, the change also reflects back in the calling function, whereas&nbsp; pass by value will not reflect back.<br>
+Python is “pass-by-object-reference”.</p>
+
+<p>Example:</p>
+
+<p>#!/usr/bin/python<br>
+# Function definition is here<br>
+def changeme( mylist ):<br>
+&nbsp;&nbsp; "This changes a passed list into this function"<br>
+&nbsp;&nbsp; mylist.append([1,2,3,4]);<br>
+&nbsp;&nbsp; print "Values inside the function: ", mylist<br>
+&nbsp;&nbsp; return</p>
+
+<p># Now you can call changeme function<br>
+mylist = [10,20,30];<br>
+changeme( mylist );<br>
+print "Values outside the function: ", mylist</p>
+
+<p>Here, we are maintaining reference of the passed object and appending values in the same object. So, this would produce the following result:</p>
+
+<p>Values inside the function:&nbsp; [10, 20, 30, [1, 2, 3, 4]]<br>
+Values outside the function:&nbsp; [10, 20, 30, [1, 2, 3, 4]]</p>
+
+<p>There is one more example where argument is being passed by reference and the reference is being overwritten inside the called function.<br>
+# Function definition is here<br>
+def changeme( mylist ):<br>
+&nbsp;&nbsp; "This changes a passed list into this function"<br>
+&nbsp;&nbsp; mylist = [1,2,3,4]; # This would assign new reference in mylist<br>
+&nbsp;&nbsp; print "Values inside the function: ", mylist<br>
+&nbsp;&nbsp; return</p>
+
+<p># Now you can call changeme function<br>
+mylist = [10,20,30];<br>
+changeme( mylist );<br>
+print "Values outside the function: ", mylist</p>
+
+<p>The parameter mylist is local to the function changeme. Changing mylist within the function does not affect mylist. The function accomplishes nothing and finally this would produce the following result:<br>
+Values inside the function:&nbsp; [1, 2, 3, 4]<br>
+Values outside the function:&nbsp; [10, 20, 30]</p>
+
+                  <div class="pull-left">
+                    <a href="/python/functions_in_python" title="Functions in Python"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Functions in Python</div></span></a>
+                    <a href="/python/functions_in_python" title="Functions in Python"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/function_arguments" title="Function arguments"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Function arguments</div> </a>
+                    <a href="/python/function_arguments" title="Function arguments"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

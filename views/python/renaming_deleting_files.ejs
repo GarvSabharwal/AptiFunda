@@ -1,0 +1,122 @@
+  <% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> File Handling Operations</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Opening and Closing Files</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+ 
+						<p><a href="/python/opening_closing_files" title="Opening and Closing Files">12.1. Opening and Closing Files</a></p>
+                        <p><a href="/python/reading_writing_files" title="Reading and Writing Files">12.2. Reading and Writing Files</a></p>
+						<p><a href="/python/renaming_deleting_files" style="color:#356BC3;" title="Renaming and Deleting Files">12.3. Renaming and Deleting Files</a></p>
+						<p><a href="directories_in_python" title="Directories in Python">12.4. Directories in Python</a></p>
+						<p><a href="/python/problem_statement_6" title="Problem statement">12.5. Problem statement</a></p>
+						<p><a href="/python/pp_11" title="Practise Problems">12.6. Practise Problems</a></p>
+
+						
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 12.3. Renaming and Deleting Files </small> </h3>
+						<hr>
+                  <p>Python os module provides methods that help you perform file-processing operations, such as renaming and deleting files.</p>
+
+<p>To use this module you need to import it first and then you can call any related functions.</p>
+
+<p><strong>1. The rename() Method</strong><br>
+The rename() method takes two arguments, the current file name and the new file name.</p>
+
+<p><strong>SYNTAX:</strong><br>
+os.rename(current_file_name, new_file_name)</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to rename an existing file test1.txt:<br>
+import os</p>
+
+<p># Rename a file from test1.txt to test2.txt<br>
+os.rename( "test1.txt", "test2.txt" )</p>
+
+<p><strong>2. The remove() Method</strong><br>
+You can use the remove() method to delete files by supplying the name of the file to be deleted as the argument.</p>
+
+<p><strong>SYNTAX:</strong><br>
+os.remove(file_name)</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to delete an existing file test2.txt:<br>
+import os</p>
+
+<p># Delete file test2.txt<br>
+os.remove("text2.txt")</p>
+
+                  <div class="pull-left">
+                    <a href="/python/reading_writing_files" title="Reading and Writing Files"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Reading and Writing Files</div></span></a>
+                    <a href="/python/reading_writing_files" title="Reading and Writing Files"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/directories_in_python" title="Directories in Python"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Directories in Python</div> </a>
+                    <a href="/python/directories_in_python" title="Directories in Python"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

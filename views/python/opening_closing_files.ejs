@@ -1,0 +1,157 @@
+  <% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> File Handling Operations</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Opening and Closing Files</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+ 
+ <p ><a href="/python/opening_closing_files" style="color:#356BC3;" title="Opening and Closing Files">12.1. Opening and Closing Files</a></p>
+                        <p><a href="/python/reading_writing_files" title="Reading and Writing Files">12.2. Reading and Writing Files</a></p>
+						<p><a href="/python/renaming_deleting_files" title="Renaming and Deleting Files">12.3. Renaming and Deleting Files</a></p>
+						<p><a href="directories_in_python" title="Directories in Python">12.4. Directories in Python</a></p>
+						<p><a href="/python/problem_statement_6" title="Problem statement">12.5. Problem statement</a></p>
+						<p><a href="/python/pp_11" title="Practise Problems">12.6. Practise Problems</a></p>
+
+						
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 12.1. Opening and Closing Files </small> </h3>
+          <hr>
+                  <p>Until now, you have been reading and writing to the standard input and output. Now, we will see how to play with actual data files.</p>
+
+<p>Python provides basic functions and methods necessary to manipulate files by default. You can do your most of the file manipulation using a file object.</p>
+
+<p><strong>1. The open Function</strong><br>
+Before you can read or write a file, you have to open it using Python's built-in open() function. This function creates a file object, which would be utilized to call other support methods associated with it.</p>
+
+<p><strong>SYNTAX:</strong><br>
+file object = open(file_name [, access_mode][, buffering])<br>
+Here is parameters' detail,</p>
+
+<p>file_name: The file_name argument is a string value that contains the name of the file that you want to access.</p>
+
+<p>access_mode: The access_mode determines the mode in which the file has to be opened, i.e., read, write, append, etc. A complete list of possible values is given below in the table. This is optional parameter and the default file access mode is read (r).</p>
+
+<p>buffering: If the buffering value is set to 0, no buffering will take place. If the buffering value is 1, line buffering will be performed while accessing a file. If you specify the buffering value as an integer greater than 1, then buffering action will be performed with the indicated buffer size. If negative, the buffer size is the system default(default behaviour).</p>
+
+<p>Here is a list of the different modes of opening a file:</p>
+
+<p><img alt="" src="./12.1Opening and Closing Files_files/content_1.png" style="height:600px; width:560px"></p>
+
+<p><strong>2. The file object attributes</strong></p>
+
+<p>Once a file is opened and you have one file object, you can get various information related to that file.<br>
+Here is a list of all attributes related to file object:</p>
+
+<p><strong>Attribute&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Description</strong><br>
+file.closed&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Returns true if file is closed, false otherwise.<br>
+file.mode&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Returns access mode with which file was opened.<br>
+file.name&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Returns name of the file.<br>
+file.softspace&nbsp;&nbsp;&nbsp;&nbsp; Returns false if space explicitly required with print, true otherwise.</p>
+
+<p><strong>EXAMPLE:</strong></p>
+
+<p>#!/usr/bin/python<br>
+# Open a file<br>
+fo = open("foo.txt", "wb")<br>
+print "Name of the file: ", fo.name<br>
+print "Closed or not : ", fo.closed<br>
+print "Opening mode : ", fo.mode<br>
+print "Soft space flag : ", fo.softspace</p>
+
+<p>This would produce the following result:<br>
+Name of the file:&nbsp; foo.txt<br>
+Closed or not :&nbsp; False<br>
+Opening mode :&nbsp; wb<br>
+Soft space flag :&nbsp; 0</p>
+
+<p><strong>3. The close() Method</strong></p>
+
+<p>The close() method of a file object flushes any unwritten information and closes the file object, after which no more writing can be done.</p>
+
+<p>Python automatically closes a file when the reference object of a file is<br>
+reassigned to another file. It is a good practice to use the close() method to close a file.</p>
+
+<p><strong>SYNTAX:</strong><br>
+fileObject.close();</p>
+
+<p><strong>EXAMPLE:</strong><br>
+# Open a file<br>
+fo = open("foo.txt", "wb")<br>
+print "Name of the file: ", fo.name</p>
+
+<p># Close opened file<br>
+fo.close()<br>
+This would produce the following result:</p>
+
+<p>Name of the file:&nbsp; foo.txt</p>
+
+                  <div class="pull-right">
+                    <a href="/python/reading_writing_files" title="Reading and Writing Files"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Reading and Writing Files</div> </a>
+                    <a href="/python/reading_writing_files" title="Reading and Writing Files"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

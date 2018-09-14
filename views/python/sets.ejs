@@ -1,0 +1,162 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python--Additional Data Storage Objects</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Dictionaries</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+
+
+
+
+
+
+
+
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p>
+                  <a href="/python/lists" title="Lists">9.1. Lists</a>
+                </p>
+                <p>
+                  <a href="/python/tuples" title="Tuples">9.2. Tuples</a>
+                </p>
+                <p>
+                  <a href="/python/diff_list_and_tuple" title="Differences between list and tuple">9.3. Differences between list and tuple</a>
+                </p>
+                <p>
+                  <a href="/python/dictionaries" title="Dictionaries">9.4. Dictionaries</a>
+                </p>
+                <p>
+                  <a href="/python/sets" style="color:#356BC3;" title="Sets">9.5. Sets</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_3" title="Problem statement">9.6. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_8" title="Practise Problems">9.7. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">9.5. Sets</small>
+                    </h3>
+				<hr>
+                  <p>A set is a dictionary with no values. It has only unique keys. Its syntax is similar to that for a dictionary. But we omit the values,and can use complex,powerful set logic.</p>
+
+<p><strong>1. Creating a set</strong><br>
+General syntax for set creation is as follows:<br>
+set1={'a','b','c'}<br>
+We can also create a set using set() function by providing parameters as list.</p>
+
+<p>Example:<br>
+set1=set([1,2])<br>
+Note : Use set() operator for creating empty set ,variable with empty {} will be considered as a dictionary.</p>
+
+<p><strong>2. Modifying sets</strong></p>
+
+<p>This example explains about the usage of sets.</p>
+
+<p>#!/usr/bin/python<br>
+set1 = set()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # A new empty set<br>
+set1.add("cat")<br>
+''' Adds a single member<br>
+(We can't add several members using add operator)<br>
+'''<br>
+set1.update(["dog", "mouse"])&nbsp; # Adds several members<br>
+if "cat" in set1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Membership test<br>
+&nbsp; set1.remove("cat")&nbsp;&nbsp;&nbsp;&nbsp; #removes string literal “cat”<br>
+#set1.remove("elephant") - throws an error as there is no “elephant” in set list<br>
+print set1<br>
+for item in set1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Iteration on sets<br>
+&nbsp; print item<br>
+print "Item count:", len(set1) # size of set1 is printed as output<br>
+len(set1) == 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; Tests if set is empty<br>
+set1 = set(["cat", "dog"])&nbsp;&nbsp;&nbsp;&nbsp; # Initialize set from a list<br>
+set2 = set(["dog", "mouse"])<br>
+set3 = set1 &amp; set2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Intersection of sets<br>
+set31=set1.intersection(set2) # same as above<br>
+set4 = set1 | set2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Union of sets<br>
+set41=set1.union(set2)&nbsp;&nbsp;&nbsp; #same as above<br>
+set5 = set1 - set3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Set difference<br>
+set6 = set1.difference(set3) #output would be same as set5<br>
+set1 &lt;= set2&nbsp;&nbsp;&nbsp; # Subset test(returns true if set1 is a subset of set2)<br>
+set1.issubset(set2)&nbsp;&nbsp;&nbsp; #same as set1&lt;=set2<br>
+set1 &gt;= set2 # Superset test(returns true if set1 is a super of set2)<br>
+set1.issuperset(set2) #same as set1&gt;=set2<br>
+set8 = set1.copy()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # set1 is copied to set8<br>
+set8.clear()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Clears all the elements of set8</p>
+
+                  <div class="pull-left">
+                    <a href="/python/dictionaries" title="Dictionaries"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Dictionaries</div></span></a>
+                    <a href="/python/dictionaries" title="Dictionaries"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_3" title="Problem statement"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement</div> </a>
+                    <a href="/python/problem_statement_3" title="Problem statement"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+

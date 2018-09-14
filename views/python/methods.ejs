@@ -1,0 +1,205 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 14. Object Oriented Programming in Python</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">14.2. Methods</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+
+
+
+
+
+
+                <p>
+                  <a  href="/python/classes_and_objects" title="Classes and objects">14.1. Classes and objects</a>
+                </p>
+                <p>
+                  <a style="color:#356BC3;" href="/python/methods" title="Methods"><strong>14.2. Methods</strong></a>
+                </p>
+                <p>
+                  <a href="/python/python_memory_management" title="Python memory management">14.3. Python memory management</a>
+                </p>
+                <p>
+                  <a href="/python/principles_of_object_orientation" title="Principles of object orientation">14.4. Principles of object orientation</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_8" title="Problem statement">14.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_13" title="Practise Problems">14.6. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 14.2. Methods </small>
+            </h3>
+            <hr>
+                  <p>A function defined in a class is called a "method". Methods have access to all the data contained on the instance of the object. they can access and modify anything previously set on self (discussed in 1.2.2.4). Because they use self, they require an instance of the class in order to be used. For this reason, they're often referred to as "instance methods".</p>
+
+<p><strong>Constructor __init__</strong><br>
+The __init__ method is run as soon as an object of a class is instantiated. Its aim is to initialize the object. While creating an instance we need some values for internal data.</p>
+
+<p>Example of class with __init__ method<br>
+#!/usr/bin/python<br>
+class Coordinate(object):<br>
+&nbsp;&nbsp; &nbsp;def __init__(self,x,y):<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; self.x=x<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; self.y=y<br>
+The “.” operator is used to access an attribute of an object. So the __init__ method above is defining two attributes for new Coordinate object x and y.</p>
+
+<p>Now,c=Coordinate(3,4)<br>
+print c.x,c.y</p>
+
+<p>Prints 3 4 as output</p>
+
+<p><strong>Invoking attributes and methods</strong></p>
+
+<p>Syntax to invoke attribute:<br>
+object.attribute</p>
+
+<p>Syntax to invoke method:<br>
+object.method()</p>
+
+<p><strong>User defined methods</strong></p>
+
+<p>User defined methods are same as function definition but must be defined inside a class.</p>
+
+<p>Example of class with methods:<br>
+#!/usr/bin/python<br>
+class Rectangle:<br>
+&nbsp;&nbsp;&nbsp; def __init__(self,x,y):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.x = x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.y = y<br>
+&nbsp;&nbsp;&nbsp; def area(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.x * self.y<br>
+&nbsp;&nbsp;&nbsp; def perimeter(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 2 * self.x + 2 * self.y</p>
+
+<p>This example has methods area and perimeter that are used to calculate area and perimeter of an object of the class Rectangle.</p>
+
+<p><strong>self</strong></p>
+
+<p>Each method in a class definition begins with a reference to the instance object. It is by convention named self i.e., methods class access data via self.<br>
+For example above(Rectangle class),<br>
+instantiate object<br>
+r=Rectangle(4,5)<br>
+r.area() #area() method uses x and y attributes using self</p>
+
+<p>“Self” in Python works as a variable of function but it won't invoke data.</p>
+
+<p><strong>Form and object for a class</strong><br>
+Class includes two members form and object.<br>
+The following example can explain the difference between form and object for a class.<br>
+#!/usr/bin/python<br>
+Class A:<br>
+&nbsp;&nbsp; &nbsp;i=123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #It is a form<br>
+&nbsp;&nbsp; &nbsp;def __init__(self):<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self.i=12345 &nbsp;</p>
+
+<p>print A.i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #It is a form<br>
+print A().i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #It is an object</p>
+
+<p>Output would be<br>
+123<br>
+12345</p>
+
+<p><strong>Destructor</strong></p>
+
+<p>Destructor method is used to delete an object created by initializing constructor.<br>
+It is called when the instance is about to be destroyed.<br>
+The following example shows a class with constructor and destructor:<br>
+#!/usr/bin/python<br>
+class Greeting:<br>
+&nbsp;&nbsp;&nbsp; def __init__(self, name):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.name = name<br>
+&nbsp;&nbsp;&nbsp; def __del__(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Destructor started"<br>
+&nbsp;&nbsp;&nbsp; def SayHello(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Hello", self.name</p>
+
+<p><br>
+__del__ is a method used for class destructor.<br>
+Let us create an object<br>
+x1=Greeting(“Hari”)<br>
+x2=x1&nbsp;&nbsp;&nbsp;&nbsp; #Another object x2 is created<br>
+&gt;&gt;&gt;del x1<br>
+&gt;&gt;&gt;del x2<br>
+Destructor started</p>
+
+<p>Here,If you observe destructor is called only after reference count of objects reaches zero.</p>
+
+<p>Note: special methods (like ex: __init__ , __del__) start and end with two underscores.</p>
+
+               
+                  <div class="pull-left">
+                    <a href="/python/classes_and_objects" title="Classes and objects"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Classes and objects</div></span></a>
+                    <a href="/python/classes_and_objects" title="Classes and objects"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/python_memory_management" title="Python memory management"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Python memory management</div> </a>
+                    <a href="/python/python_memory_management" title="Python memory management"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

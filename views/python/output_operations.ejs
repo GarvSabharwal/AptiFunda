@@ -1,0 +1,237 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">
+            Python -->
+            How user interact with the application? - I/O operations
+          </small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Input operations</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/input_operations" title="Input operations">3.1. Input operations</a>
+                </p>
+
+                <p>
+                  <a href="/python/output_operations" style="color:#356BC3;" title="Output Operations">3.2. Output Operations</a>
+                </p>
+                <p>
+                  <a href="/python/pp_2" title="Practise Problems">
+                    3.3. Practise Problems
+                  </a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted">
+                3.2. Output operations
+              </small>
+            </h3>
+            <hr>
+              <p><strong>1. print()</strong></p>
+
+<p>The basic way to do output is the print statement.</p>
+
+<p>print 'Hello, world'</p>
+
+<p>To print multiple things on the same line separated by spaces, use commas between them, like this:<br>
+print 'Hello,', 'World'</p>
+
+<p>This will print out the following:<br>
+Hello, World</p>
+
+<p>While neither string contain a space, a space was added by the print statement because of the comma between the two objects. Arbitrary data types can be printed this way:<br>
+print 1,2,(10+5j),-0.999</p>
+
+<p>This will output the following:<br>
+1 2 (10+5j) -0.999</p>
+
+<p>Objects can be printed on the same line without needing to be on the same line if one puts a comma at the end of a print statement:</p>
+
+<p>for i in range(10):<br>
+&nbsp;&nbsp;&nbsp; print i,</p>
+
+<p>This will output the following:<br>
+0 1 2 3 4 5 6 7 8 9</p>
+
+<p>To end the printed line with a newline, add a print statement without any objects.</p>
+
+<p>for i in range(10):<br>
+&nbsp;&nbsp;&nbsp; print i,<br>
+print<br>
+for i in range(10,20):<br>
+&nbsp;&nbsp;&nbsp; print i,</p>
+
+<p>This will output the following:<br>
+0 1 2 3 4 5 6 7 8 9<br>
+10 11 12 13 14 15 16 17 18 19</p>
+
+<p>If the bare print statement were not present, the above output would look like:<br>
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</p>
+
+<p><strong>Omitting newlines</strong></p>
+
+<p>To avoid adding spaces and newlines between objects' output with subsequent print statements, you can do one of the following:</p>
+
+<p><strong>Concatenation:</strong> Concatenate the string representations of each object, then later print the whole thing at once.<br>
+print str(1)+str(2)+str(10+5j)+str(-0.999)</p>
+
+<p>This will output the following:<br>
+12(10+5j)-0.999</p>
+
+<p>Write function: You can make a shorthand for sys.stdout.write and use that for output.</p>
+
+<p>import sys<br>
+write = sys.stdout.write<br>
+write('20')<br>
+write('05')<br>
+This will output the following:<br>
+2005<br>
+You may need sys.stdout.flush() to get that text on the screen quickly.</p>
+
+<p><strong>Examples:</strong></p>
+
+<p><strong>Examples of output with Python 2.x:</strong></p>
+
+<p>print "Hello"<br>
+print "Hello", "world"<br>
+Separates the two words with a space.</p>
+
+<p>print "Hello", 34<br>
+Prints elements of various data types, separating them by a space.</p>
+
+<p>print "Hello " + 34<br>
+Throws an error as a result of trying to concatenate a string and an integer.</p>
+
+<p>print "Hello " + str(34)<br>
+Uses "+" to concatenate strings, after converting a number to a string.</p>
+
+<p>print "Hello",<br>
+Prints "Hello " without a newline, with a space at the end.</p>
+
+<p>sys.stdout.write("Hello")<br>
+Prints "Hello" without a newline. Doing "import sys" is a prerequisite. Needs a subsequent "sys.stdout.flush()" in order to display immediately on the user's screen.</p>
+
+<p>sys.stdout.write("Hello\n")<br>
+Prints "Hello" with a newline.</p>
+
+<p>print &gt;&gt; sys.stderr, "An error occurred."<br>
+Prints to standard error stream.</p>
+
+<p>sys.stderr.write("Hello\n")<br>
+Prints to standard error stream.</p>
+
+<p><strong>Examples of output with Python 3.x:</strong></p>
+
+<p>from __future__ import print_function<br>
+Ensures Python 2.6 and later Python 2.x can use Python 3.x print function.</p>
+
+<p>print ("Hello", "world")<br>
+Prints the two words separated with a space. Notice the surrounding brackets, ununsed in Python 2.x.</p>
+
+<p>print ("Hello world", end="")<br>
+Prints without the ending newline.</p>
+
+<p>print ("Hello", "world", sep="-")<br>
+Prints the two words separated with a hyphen.</p>
+
+<p><strong>Problem statement</strong><br>
+Write a program to convert Celsius input into Fahrenheit scale.</p>
+
+<p><strong>Solution</strong><br>
+#!/usr/bin/python<br>
+x=float(input('enter Celsius input'))<br>
+y=x*9.0/5.0 + 32<br>
+print ("The Fahrenheit value is:",y)</p>
+
+                  <div class="pull-left">
+                    <a href="/python/input_operations" title="Input operations"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Input operations</div></span></a>
+                    <a href="/python/input_operations" title="Input operations"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/pp_2" title="Practise Problems"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/python/pp_2" title="Practise Problems"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </main>
+      <% include ../footer %>

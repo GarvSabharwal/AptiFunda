@@ -1,0 +1,194 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 14. Object Oriented Programming in Python</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">14.3. Python memory management</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+
+
+
+
+
+
+                <p>
+                  <a  href="/python/classes_and_objects" title="Classes and objects">14.1. Classes and objects</a>
+                </p>
+                <p>
+                  <a href="/python/methods" title="Methods">14.2. Methods</a>
+                </p>
+                <p>
+                  <a style="color:#356BC3;" href="/python/python_memory_management" title="Python memory management"><strong>14.3. Python memory management</strong></a>
+                </p>
+                <p>
+				
+                  <a href="/python/principles_of_object_orientation" title="Principles of object orientation">14.4. Principles of object orientation</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_8" title="Problem statement">14.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_13" title="Practise Problems">14.6. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 14.3. Python memory management </small> </h3>
+			  <hr>
+                  <p>Python's memory allocation and deallocation method is automatic.</p>
+
+<p>The user does not have to preallocate or deallocate memory by hand as one has to when using dynamic memory allocation in languages such as C or C++.</p>
+
+<p>Python uses two strategies for memory allocation reference counting and garbage collection.</p>
+
+<p>Prior to Python version 2.0, the Python interpreter only used reference counting for memory management.</p>
+
+<p>Reference counting works by counting the number of times an object is referenced by other objects in the system.</p>
+
+<p>When references to an object are removed, the reference count for an object is decremented. When the reference count becomes zero the object is deallocated.</p>
+
+<p>Reference counting is extremely efficient but it does have some caveats.</p>
+
+<p>One such caveat is that it cannot handle reference cycles. A reference cycle is when there is no way to reach an object but its reference count is still greater than zero.</p>
+
+<p>The easiest way to create a reference cycle is to create an object which refers to itself as in the example below:</p>
+
+<p>def make_cycle():<br>
+&nbsp;&nbsp;&nbsp; l = [ ]<br>
+&nbsp;&nbsp;&nbsp; l.append(l)<br>
+&nbsp;<br>
+make_cycle()</p>
+
+<p>Because make_cycle() creates an object l which refers to itself, the object l will not automatically be freed when the function returns.<br>
+This will cause the memory that l is using to be held onto until the Python garbage collector is invoked.</p>
+
+<p><strong>Automatic Garbage Collection of Cycles</strong></p>
+
+<p>Because reference cycles are take computational work to discover, garbage collection must be a scheduled activity. Python schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations are greater than the threshold number, the garbage collector is run. One can inspect the threshold for new objects (objects in Python known as generation 0 objects) by loading the gc module and asking for garbage collection thresholds:</p>
+
+<p>import gc<br>
+print "Garbage collection thresholds: %r" % gc.get_threshold()</p>
+
+<p>Garbage collection thresholds: (700, 10, 10)</p>
+
+<p>Here we can see that the default threshold on the above system is 700. This means when the number of allocations vs. the number of deallocations is greater than 700 the automatic garbage collector will run.<br>
+Automatic garbage collection will not run if your Python device is running out of memory; instead your application will throw exceptions, which must be handled or your application crashes. This is aggravated by the fact that the automatic garbage collection places high weight upon the NUMBER of free objects, not on how large they are. Thus any portion of your code which frees up large blocks of memory is a good candidate for running manual garbage collection.</p>
+
+<p><strong>Manual Garbage Collection</strong><br>
+For some programs, especially long running server applications or embedded applications running on a Digi Device automatic garbage collection may not be sufficient. Although an application should be written to be as free of reference cycles as possible, it is a good idea to have a strategy for how to deal with them. Invoking the garbage collector manually during opportune times of program execution can be a good idea on how to handle memory being consumed by reference cycles.<br>
+The garbage collection can be invoked manually in the following way:</p>
+
+<p>import gc<br>
+gc.collect()</p>
+
+<p>gc.collect() returns the number of objects it has collected and deallocated. You can print this information in the following way:</p>
+
+<p>import gc<br>
+collected = gc.collect()<br>
+print "Garbage collector: collected %d objects." % (collected)</p>
+
+<p>If we create a few cycles, we can see manual collection work:</p>
+
+<p>import sys, gc<br>
+&nbsp;<br>
+def make_cycle():<br>
+&nbsp;&nbsp;&nbsp; l = { }<br>
+&nbsp;&nbsp;&nbsp; l[0] = l<br>
+&nbsp;<br>
+def main():<br>
+&nbsp;&nbsp;&nbsp; collected = gc.collect()<br>
+&nbsp;&nbsp;&nbsp; print "Garbage collector: collected %d objects." % (collected)<br>
+&nbsp;&nbsp;&nbsp; print "Creating cycles..."<br>
+&nbsp;&nbsp;&nbsp; for i in range(10):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; make_cycle()<br>
+&nbsp;&nbsp;&nbsp; collected = gc.collect()<br>
+&nbsp;&nbsp;&nbsp; print "Garbage collector: collected %d objects." % (collected)<br>
+&nbsp;<br>
+if __name__ == "__main__":<br>
+&nbsp;&nbsp;&nbsp; ret = main()<br>
+&nbsp;&nbsp;&nbsp; sys.exit(ret)</p>
+
+<p>In general there are two recommended strategies for performing manual garbage collection: time-based and event-based garbage collection. Time-based garbage collection is simple: the garbage collector is called on a fixed time interval. Event-based garbage collection calls the garbage collector on an event. For example, when a user disconnects from the application or when the application is known to enter an idle state.</p>
+
+<p><strong>Recommendations</strong></p>
+
+<p>Which garbage collection technique is correct for an application? It depends. The garbage collector should be invoked as often as necessary to collect cyclic references without affecting vital application performance. Garbage collection should be a part of your Python application design process.</p>
+
+<p>1) Do not run garbage collection too freely, as it can take considerable time to evaluate every memory object within a large system. For example, one team having memory issues tried calling gc.collect() between every step of a complex start-up process, increasing the boot time by 20 times (2000%). Running it more than a few times per day - without specific design reasons is likely a waste of device resources.<br>
+2) Run manual garbage collection after your application has completed start up and moves into steady-state operation. This frees potentially huge blocks of memory used to open and parse file, to build and modify object lists, and even code modules never to be used again. For example, one application reading XML configuration files was consuming about 1.5MB of temporary memory during the process. Without manual garbage collection, there is no way to predict when that 1.5MB of memory will be returned to the python memory pools for reuse.<br>
+3) Consider manually running garbage collection either before or after timing-critical sections of code to prevent garbage collection from disturbing the timing. As example, an irrigation application might sit idle for 10 minutes, then evaluate the status of all field devices and make adjustments.Since delays during system adjustment might affect field device battery life, it makes sense to manually run garbage collection as the gateway is entering the idle period after the adjustment process - or run it every sixth or tenth idle period. This insures that garbage collection won't be triggered automatically during the next timing-sensitive period.</p>
+
+<p>&nbsp;</p>
+
+               
+                  <div class="pull-left">
+                    <a href="/python/methods" title="Methods"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Methods</div></span></a>
+                    <a href="/python/methods" title="Methods"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/principles_of_object_orientation" title="Principles of object orientation"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Principles of object orientation</div> </a>
+                    <a href="/python/principles_of_object_orientation" title="Principles of object orientation"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

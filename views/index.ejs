@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+	
+	<link rel="canonical" href="http://example.ampproject.org/article-metadata.html"  title="aptitude amp"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title><%=title%></title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" title="aptitude amp">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" >
+	<link href="../../css/style.css" rel="stylesheet" >
+    <!-- Material Design Bootstrap -->
+    <link href="../../css/mdb.min.css" rel="stylesheet" >
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        /* Necessary for full page carousel*/
+        
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .top-nav-collapse {
+            background-color: #4285F4;
+        }
+        
+        footer.page-footer {
+            background-color: #4285F4;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #4285F4;
+            }
+        }
+        /* Carousel*/
+        
+        .carousel {
+            height: 50%;
+		
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        /*http://mdbootstrap.com/images/slides/slide%20(6).jpg 
+			http://mdbootstrap.com/images/slides/slide%20(11).jpg
+		http://mdbootstrap.com/images/slides/slide%20(7).jpg
+		*/
+        .carousel-item:nth-child(1) {
+            background-image: url("http://mdbootstrap.com/images/slides/slide%20(6).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.4;
+        }
+        
+        .carousel-item:nth-child(2) {
+            background-image: url("http://mdbootstrap.com/images/slides/slide%20(11).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .carousel-item:nth-child(3) {
+            background-image: url("http://mdbootstrap.com/images/slides/slide%20(7).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /*Caption*/
+        
+        .flex-center {
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="container">
+			<!--Navbar Brand-->
+                <a class="navbar-brand" href="/" title="aptifunda" >APTI FUNDA</a>
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="#" target="_blank"></a>
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/" title="aptifunda">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aptitude" title="Aptitude">Aptitude</a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Reasoning <b class="caret"></b></a>
+						<ul class="dropdown-menu" style="background-color:#4285f4;">
+                <li><a href="#" class="nav-link"style="color:white" title="Logical Reasoning" >Logical Reasoning</a></li>
+                <li><a href="#" class="nav-link"style="color:white" title="Verbal Reasoning">Verbal Reasoning</a></li>
+					</ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Programming</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#">Test Yourself</a>
+                    </li>
+                </ul>
+                <!--Search form>
+                <form class="form-inline">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form-->
+            </div>
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+	    <!--Carousel Wrapper-->
+    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-1" data-slide-to="1"></li>
+            <li data-target="#carousel-example-1" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+                <!--Caption-->
+                <div class="flex-center animated fadeInDown">
+                    <ul>
+                        <li>
+                            <h1 class="h1-responsive">Start Learning Aptitude Now</h1></li>
+                        <li>
+                            <p>Learn from us and Compete with anyone in thw Wolrd!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#" class="btn btn-primary btn-lg">Sign up!</a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCQX8_vICb3xKoY-rIJ8Zs_Q" class="btn btn-default btn-lg">Subscribe Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Caption-->
+            </div>
+            <!--/.First slide-->
+
+            <!--Second slide -->
+            <div class="carousel-item">
+                <!--Caption-->
+                <div class="flex-center animated fadeInDown">
+                    <ul>
+                        <li>
+                            <h1 class="h1-responsive">Lots of Video Tutorials for you</h1>
+                        </li>
+                        <li>
+                            <p>And all of them are FREE!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCQX8_vICb3xKoY-rIJ8Zs_Q" class="btn btn-primary btn-lg">Start learning</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Caption-->
+            </div>
+            <!--/.Second slide -->
+
+            <!--Third slide-->
+            <div class="carousel-item">
+                <!--Caption-->
+                <div class="flex-center animated fadeInDown">
+                    <ul>
+                        <li>
+                            <h1 class="h1-responsive">Visit our support forum</h1></li>
+                        <li>
+                            <p>Our community can help you with any question</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#" class="btn btn-default btn-lg">Support forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Caption-->
+            </div>
+            <!--/.Third slide-->
+        </div>
+        <!--/.Slides-->
+
+        <!--Controls-->
+        <a class="left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <br>
+
+    <!--Content-->
+    <main>
+        <!--Main layout-->
+        <div class="container">
+
+            <!--Page heading-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="h1-responsive">Welcome To 
+                        <small class="text-muted">APTIFUNDA.com</small>
+                    </h1>
+                </div>
+            </div>
+            <!--/.Page heading-->
+            <hr>
+
+            <!--First row-->
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-4 animated fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									APTITUDE + REASONING
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad" >
+                            <ul>
+                            <li><a 	href="/aptitude"  class="anchor-class" title="Aptitude">Aptitude</a></li>
+							<li><a 	href="/logical_reasoning" class="anchor-class" title="Logical Reasoning">Logical Reasoning</a></li>
+							<!--li><a  href="/data_interpretation"  class="anchor-class">Data Interpretation</a></li-->
+							<li><a  href="/verbal_reasoning" class="anchor-class" title="Verbal Reasoning">Verbal Reasoning</a></li>
+							<li><a  href="#" class="anchor-class" title="Aptitude Test">Aptitude Test</a></li>
+							</ul>
+                            <!--div class="read-more">
+                                <a href="/aptitude-reasoning" class="btn btn-primary">Read more</a>
+                            </div-->
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-4 animated fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									VERBAL + PSYCHOMETRY
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad">
+						<ul>
+				<li><a  href="/uplodedsoon" class="anchor-class" title="Psychometry" >Psychometry</a></li>
+                <li><a  href="/Verbal_Ability" class="anchor-class" title="Verbal Ability">Verbal Ability</a></li>
+                <li><a  href="/uplodedsoon" class="anchor-class" title="Psychometry Test" >Psychometric Test</a></li>
+				<li><a  href="/uplodedsoon" class="anchor-class" title="Verbal Ability Test">Verbal Ability Test</a></li>
+				</ul>
+                            
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-4 animated fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms" >
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									LEARN PROGRAMMING
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad">
+                            <!--Title-->
+							<ul>
+                            <li><a 	href="/uplodedsoon" class="anchor-class">C Programming</a></li>
+							<li><a 	href="/uplodedsoon" class="anchor-class">C++ Programming</a></li>
+							<li><a  href="/javaprogramming" class="anchor-class" >Java Programming</a></li>
+							<li><a  href="/python" class="anchor-class">Python Programming</a></li>
+							</ul>
+                            <!--div class="read-more">
+                                <a href="#!" class="btn btn-primary">Read more</a>
+                            </div-->
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>                <!--/.Third column-->
+            </div>
+            <!--/.First row-->
+				<br>
+				<br>
+            <!--Second row-->
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-4">
+                    <!--Card-->
+                    <div class="card  z-depth-2 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									PROGRAMMING MCQ's
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad">
+                            <ul>
+                            <li><a 	href="/uplodedsoon" class="anchor-class">C MCQ's</a></li>
+							<li><a 	href="/uplodedsoon" class="anchor-class">C++ MCQ's</a></li>
+							<li><a  href="/uplodedsoon" class="anchor-class" >Java MCQ's</a></li>
+							<li><a  href="/uplodedsoon" class="anchor-class">Python MCQ's</a></li>
+							</ul>
+                            <!--div class="read-more">
+                                <a href="#!" class="btn btn-primary">Read more</a>
+                            </div-->
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									PREVIOUS YEAR's KUK PAPERS
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad">
+                            <ul>
+                            <li><a 	href="/uplodedsoon" class="anchor-class">B.Tech</a></li>
+							<li><a 	href="/uplodedsoon" class="anchor-class">M.Tech</a></li>
+							<li><a  href="/uplodedsoon" class="anchor-class" >Management</a></li>
+							<li><a  href="/uplodedsoon" class="anchor-class">Computer Aplications</a></li>
+							</ul>
+                            <!--div class="read-more">
+                                <a href="#!" class="btn btn-primary">Read more</a>
+                            </div-->
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Second column-->
+
+                <!--Third column-->
+                <div class="col-md-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient">
+									DIFFERENT LECTURES
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+                        <div class="card-block pad">
+						<ul>
+                            <li><a 	href="/uplodedsoon" class="anchor-class">Aptitude Lectures</a></li>
+						<li><a  href="/uplodedsoon" class="anchor-class" >Reasoning Lectures</a></li>
+						<li><a  href="/uplodedsoon" class="anchor-class">Programming Lectures</a></li>
+						<li><a  href="/uplodedsoon" class="anchor-class">Communication Lectures</a></li>
+						</ul>
+                            <!--div class="read-more">
+                                <a href="#!" class="btn btn-primary">Read more</a>
+                            </div-->
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--/.Third column-->
+            </div>
+            <!--/.Second row-->
+            <hr>
+<!--Pagination>
+            
+            <!--/.Pagination-->
+            <hr>
+        </div>
+        <!--/.Main layout-->
+    </main>
+    <!--/.Content-->
+	
+ <% include footer %>

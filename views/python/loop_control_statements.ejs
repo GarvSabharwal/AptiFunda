@@ -1,0 +1,208 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 7. How to execute a block of statements repetitively – Loop Structures</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">7.2. Loop control statements</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/loop_statement" title="Loop statement">7.1. Loop statement</a>
+                </p>
+                <p>
+                  <a href="/python/loop_control_statements" style="color:#356BC3;" title="Loop control statements">7.2. Loop control statements</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_1" title="Problem statement">7.3. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_6" title="Practise Problems">7.4. Practise Problems</a>
+                </p>
+
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 7.2. Loop control statements </small> </h3>
+            <hr>
+                  <p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.<br>
+Python supports the following control statements<br>
+&nbsp;1. &nbsp;&nbsp; &nbsp;break statement<br>
+&nbsp;2. &nbsp;&nbsp; &nbsp;continue<br>
+&nbsp;3. &nbsp;&nbsp; &nbsp;pass</p>
+
+<p><strong>1.break statement</strong></p>
+
+<p>The break statement in Python terminates the current loop and resumes execution at the next statement, just like the traditional break found in C.<br>
+The most common use for break is when some external condition is triggered requiring a hasty exit from a loop. The break statement can be used in both while and for loops.<br>
+If you are using nested loops (i.e., one loop inside another loop), the break statement will stop the execution of the innermost loop and start executing the next line of code after the block.<br>
+&nbsp;</p>
+
+<p><strong>Syntax:</strong></p>
+
+<p>The syntax for a break statement in Python is as follows:</p>
+
+<p>break</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+for letter in 'Python':&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; if letter == 'h':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break<br>
+&nbsp;&nbsp; print 'Current Letter :', letter</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Current Letter : P<br>
+Current Letter : y<br>
+Current Letter : t</p>
+
+<p><strong>2. continue statement</strong></p>
+
+<p>The continue statement in Python returns the control to the beginning of the while loop. The continue statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop.<br>
+The continue statement can be used in both while and for loops.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<p>The syntax for a continue statement in Python is as follows:</p>
+
+<p>continue</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+for letter in 'Python':&nbsp;&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; if letter == 'h':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; continue<br>
+&nbsp;&nbsp; print 'Current Letter :', letter</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Current Letter : P<br>
+Current Letter : y<br>
+Current Letter : t<br>
+Current Letter : o<br>
+Current Letter : n</p>
+
+<p><strong>3. pass statement</strong></p>
+
+<p>The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.<br>
+The pass statement is a null operation; nothing happens when it executes. The pass is also useful in places where your code will eventually go, but has not been written yet for ex. in stubs.</p>
+
+<p>The syntax for a pass statement in Python is as follows:</p>
+
+<p>pass</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+for letter in 'Python':<br>
+&nbsp;&nbsp; if letter == 'h':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pass<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'This is pass block'<br>
+&nbsp;&nbsp; print 'Current Letter :', letter</p>
+
+<p>print "Good bye!"</p>
+
+<p>When the above code is executed, it produces following result:<br>
+Current Letter : P<br>
+Current Letter : y<br>
+Current Letter : t<br>
+This is pass blocks<br>
+Current Letter : h<br>
+Current Letter : o<br>
+Current Letter : n</p>
+
+<p>&nbsp;</p>
+
+              
+                  <div class="pull-left">
+                    <a href="/python/loop_statement" title="Loop statement"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Loop statement</div></span></a>
+                    <a href="/python/loop_statement" title="Loop statement"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_1" title="Problem statement"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement</div> </a>
+                    <a href="/python/problem_statement_1" title="Problem statement"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </main>
+      <% include ../footer %>

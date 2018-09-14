@@ -1,0 +1,312 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> Handling runtime errors - Exception Handling</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Exceptions</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+
+ <p ><a href="/python/exception" style="color:#356BC3;" title="Simple program in Python">13.1. Exception</a></p>
+                        <p><a href="/python/raising_expections_and_userdefined" title="Raising exceptions and User defined Exceptions">13.2. Raising exceptions and User defined Exceptions</a></p>
+						<p><a href="/python/problem_statement_7" title="Problem statement">13.3. Problem statement</a></p>
+						<p><a href="/python/pp_12" title="Practise Problems">13.4. Practise Problems</a></p>
+
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">13.1. Exception </small>
+                    </h3>
+				<hr>                  <p>What is Exception?</p>
+
+<p>Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error messages as shown here:</p>
+
+<p>&gt;&gt;&gt; 10 * (1/0)<br>
+Traceback (most recent call last):<br>
+&nbsp; File "&lt;stdin&gt;", line 1, in ?<br>
+ZeroDivisionError: integer division or modulo by zero</p>
+
+<p>&gt;&gt;&gt; 4 + spam*3<br>
+Traceback (most recent call last):<br>
+&nbsp; File "&lt;stdin&gt;", line 1, in ?<br>
+NameError: name 'spam' is not defined</p>
+
+<p>&gt;&gt;&gt; '2' + 2<br>
+Traceback (most recent call last):<br>
+&nbsp; File "&lt;stdin&gt;", line 1, in ?<br>
+TypeError: cannot concatenate 'str' and 'int' objects</p>
+
+<p>The last line of the error message indicates what happened. Exceptions come in different types, and the type is printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError. The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).</p>
+
+<p>The rest of the line provides detail based on the type of exception and what caused it.<br>
+The preceding part of the error message shows the context where the exception happened, in the form of a stack traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from standard input.</p>
+
+<p>Built-in Exceptions lists the built-in exceptions and their meanings.</p>
+
+<p><strong>Handling exceptions</strong><br>
+If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. After the try: block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.</p>
+
+<p><strong>SYNTAX:</strong><br>
+Here is simple syntax of try....except...else blocks:</p>
+
+<p>#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp; You do your operations here;<br>
+&nbsp;&nbsp; ......................<br>
+except Exception1:<br>
+&nbsp;&nbsp; If there is Exception1, then execute this block.<br>
+except Exception2:<br>
+&nbsp;&nbsp; If there is Exception2, then execute this block.<br>
+&nbsp;&nbsp; ......................<br>
+else:<br>
+&nbsp;&nbsp; If there is no exception then execute this block.</p>
+
+<p>Here are few important points about the above-mentioned syntax:</p>
+
+<ul>
+	<li>&nbsp;A single try statement can have multiple except statements. This is useful when the try block contains statements that may throw different types of exceptions.</li>
+	<li>&nbsp;You can also provide a generic except clause, which handles any exception.</li>
+	<li>&nbsp;After the except clause(s), you can include an else-clause. The code in the else-block executes if the code in the try: block does not raise an exception.</li>
+	<li>&nbsp;The else-block is a good place for code that does not need the try: block's protection.</li>
+</ul>
+
+<p><strong>EXAMPLE:</strong><br>
+Here is simple example, which opens a file and writes the content in the file and comes out gracefully because there is no problem at all:</p>
+
+<p>#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp; fh = open("testfile", "w")<br>
+&nbsp;&nbsp; fh.write("This is my test file for exception handling!!")<br>
+except IOError:<br>
+&nbsp;&nbsp; print "Error: can\'t find file or read data"<br>
+else:<br>
+&nbsp;&nbsp; print "Written content in the file successfully"<br>
+&nbsp;&nbsp; fh.close()</p>
+
+<p>This will produce the following result:<br>
+Written content in the file successfully.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Here is one more simple example, which tries to open a file where you do not have permission to write in the file, so it raises an exception:</p>
+
+<p>#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp; fh = open("testfile", "r")<br>
+&nbsp;&nbsp; fh.write("This is my test file for exception handling!!")<br>
+except IOError:<br>
+&nbsp;&nbsp; print "Error: can\'t find file or read data"<br>
+else:<br>
+&nbsp;&nbsp; print "Written content in the file successfully:</p>
+
+<p>This will produce the following result:<br>
+Error: can't find file or read data</p>
+
+<p><u><strong>The except clause with no exceptions:</strong></u><br>
+You can also use the except statement with no exceptions defined as follows:<br>
+try:<br>
+&nbsp;&nbsp; You do your operations here;<br>
+&nbsp;&nbsp; ......................<br>
+except:<br>
+&nbsp;&nbsp; If there is any exception, then execute this block.<br>
+&nbsp;&nbsp; ......................<br>
+else:<br>
+&nbsp;&nbsp; If there is no exception then execute this block. &nbsp;</p>
+
+<p>This kind of a try-except statement catches all the exceptions that occur. Using this kind of try-except statement is not considered a good programming practice though, because it catches all exceptions but does not make the programmer identify the root cause of the problem that may occur.</p>
+
+<p><strong>Example:</strong><br>
+# import module sys to get the type of exception<br>
+#!/usr/bin/python<br>
+import sys</p>
+
+<p>while True:<br>
+&nbsp;&nbsp; &nbsp;try:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;x = int(input("Enter an integer: "))<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;r = 1/x<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;break<br>
+&nbsp;&nbsp; &nbsp;except:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print("Oops!",sys.exc_info()[0],"occured.")<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print("Please try again.")<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print()</p>
+
+<p>print("The reciprocal of",x,"is",r)</p>
+
+<p>Here is a sample run of this program.</p>
+
+<p>Enter an integer: 1.3<br>
+Oops! &lt;class 'ValueError'&gt; occured.<br>
+Please try again.</p>
+
+<p>Enter an integer: 0<br>
+Oops! &lt;class 'ZeroDivisionError'&gt; occured.<br>
+Please try again.</p>
+
+<p>Enter an integer: 2<br>
+The reciprocal of 2 is 0.5</p>
+
+<p>In this program, we loop until the user enters an integer that has a valid reciprocal. The portion that can cause exception is placed inside try block. If no exception occurs, except block is skipped and normal flow continues. But if any exception occurs, it is caught by the except block. Here, we print the name of the exception using ex_info() function inside sys module and ask the user to try again. We can see that the values 'a' and '1.3' causes ValueError and '0' causes ZeroDivisionError.</p>
+
+<p><u><strong>The except clause with multiple exceptions:</strong></u></p>
+
+<p>You can also use the same except statement to handle multiple exceptions as follows:</p>
+
+<p>try:<br>
+&nbsp;&nbsp; You do your operations here;<br>
+&nbsp;&nbsp; ......................<br>
+except(Exception1[, Exception2[,...ExceptionN]]]):<br>
+&nbsp;&nbsp; If there is any exception from the given exception list,<br>
+&nbsp;&nbsp; then execute this block.<br>
+&nbsp;&nbsp; ......................<br>
+else:<br>
+&nbsp;&nbsp; If there is no exception then execute this block.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp;&nbsp; f = open('integers.txt')<br>
+&nbsp;&nbsp;&nbsp; s = f.readline()<br>
+&nbsp;&nbsp;&nbsp; i = int(s.strip())<br>
+except (IOError, ValueError):<br>
+&nbsp;&nbsp;&nbsp; print("An I/O error or a ValueError occurred")<br>
+except:<br>
+&nbsp;&nbsp;&nbsp; print("An unexpected error occurred")<br>
+&nbsp;&nbsp;&nbsp; raise</p>
+
+<p><u><strong>The try-finally clause:</strong></u></p>
+
+<p>You can use a finally: block along with a try: block. The finally block is a place to put any code that must execute, whether the try-block raised an exception or not.</p>
+
+<p>The syntax of the try-finally statement is this:</p>
+
+<p>try:<br>
+&nbsp;&nbsp; You do your operations here;<br>
+&nbsp;&nbsp; ......................<br>
+&nbsp;&nbsp; Due to any exception, this may be skipped.<br>
+finally:<br>
+&nbsp;&nbsp; This would always be executed.<br>
+&nbsp;&nbsp; ......................<br>
+Note that you can provide except clause(s), or a finally clause, but not both. You can not use else clause as well along with a finally clause.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+#!/usr/bin/python<br>
+try:<br>
+&nbsp;&nbsp; fh = open("testfile", "w")<br>
+&nbsp;&nbsp; fh.write("This is my test file for exception handling!!")<br>
+finally:<br>
+&nbsp;&nbsp; print "Error: can\'t find file or read data"</p>
+
+<p>If you do not have permission to open the file in writing mode, then this will produce the following result:<br>
+Error: can't find file or read data</p>
+
+<p>Same example can be written more cleanly as follows:<br>
+try:<br>
+&nbsp;&nbsp; fh = open("testfile", "w")<br>
+&nbsp;&nbsp; try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fh.write("This is my test file for exception handling!!")<br>
+&nbsp;&nbsp; finally:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Going to close the file"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fh.close()<br>
+except IOError:<br>
+&nbsp;&nbsp; print "Error: can\'t find file or read data"</p>
+
+<p>When an exception is thrown in the try block, the execution immediately passes to the finally block. After all the statements in the finally block are executed, the exception is raised again and is handled in the except statements if present in the next higher layer of the try-except statement.</p>
+
+<p><u><strong>Argument of an Exception:</strong></u><br>
+An exception can have an argument, which is a value that gives additional information about the problem. The contents of the argument vary by exception. You capture an exception's argument by supplying a variable in the except clause as follows:</p>
+
+<p>try:<br>
+&nbsp;&nbsp; You do your operations here;<br>
+&nbsp;&nbsp; ......................<br>
+except ExceptionType, Argument:<br>
+&nbsp;&nbsp; You can print value of Argument here...</p>
+
+<p>If you are writing the code to handle a single exception, you can have a variable follow the name of the exception in the except statement. If you are trapping multiple exceptions, you can have a variable follow the tuple of the exception.</p>
+
+<p>This variable will receive the value of the exception mostly containing the cause of the exception. The variable can receive a single value or multiple values in the form of a tuple. This tuple usually contains the error string, the error number, and an error location.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is an example for a single exception:</p>
+
+<p>#!/usr/bin/python<br>
+# Define a function here.<br>
+def temp_convert(var):<br>
+&nbsp;&nbsp; try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return int(var)<br>
+&nbsp;&nbsp; except ValueError, Argument:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "The argument does not contain numbers\n", Argument</p>
+
+<p># Call above function here.<br>
+temp_convert("xyz");<br>
+This would produce the following result:<br>
+The argument does not contain numbers<br>
+invalid literal for int() with base 10: 'xyz'</p>
+
+<p>&nbsp;</p>
+
+                  <div class="pull-right">
+                    <a href="/python/raising_expections_and_userdefined" title="Raising exceptions and User defined Exceptions"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Raising exceptions and User defined Exceptions</div> </a>
+                    <a href="/python/raising_expections_and_userdefined" title="Raising exceptions and User defined Exceptions"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

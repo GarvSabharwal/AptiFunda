@@ -1,0 +1,174 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Learn Python Programming</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Variables and Literals</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+
+              <div class="col-md-12">
+
+                <p class="active">
+                  <a href="/python/data_types" title="Basic Data Types">4.1. Basic Data types </a>
+                </p>
+                <p>
+                  <a href="/python/variables_literals" title="Variables and Literals">4.2. Variables and Literals</a>
+                </p>
+                <p>
+                  <a href="/python/more_on_strings" style="color:#356BC3;" title="More on strings">4.3. More on strings</a>
+                </p>
+                <p>
+                  <a href="/python/type_conversion" title="Type conversions">4.4. Type conversions</a>
+                </p>
+                <p>
+                  <a href="/python/pp_3" title="Practise Problems">4.5. Practise Problems</a>
+                </p>
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 4.3. More on strings </small>
+            </h3>
+            <hr>
+                  <p><strong>Special characters in strings</strong></p>
+
+<p>The backslash (\) character is used to introduce a special character. See the following table.<br>
+Escape sequence<br>
+Meaning<br>
+\n<br>
+Newline<br>
+\t<br>
+Horizontal Tab<br>
+\\<br>
+Backslash<br>
+\'<br>
+Single Quote<br>
+\"<br>
+Double Quote</p>
+
+<p><strong>String indices</strong></p>
+
+<p>Strings are arrays of characters and elements of an array can be accessed using indexing. Indices start with 0 from left side and -1 when start from right side.</p>
+
+<p>Consider, string1="PYTHON TUTORIAL"</p>
+
+<p>Following are the statements to access single character from various positions:</p>
+
+<p>print(string1[0])&nbsp;&nbsp; &nbsp;Ans:P<br>
+print(string1[-15])&nbsp;&nbsp; &nbsp;Ans:P<br>
+print(string1[14])&nbsp;&nbsp; &nbsp;Ans:L<br>
+print(string1[-1])&nbsp;&nbsp; &nbsp;Ans:L<br>
+print(string1[4])&nbsp;&nbsp; &nbsp;Ans:O<br>
+print(string1[15])&nbsp;&nbsp; &nbsp;Ans:IndexError: string index out of range</p>
+
+<p><strong>'in' operator in Strings</strong></p>
+
+<p>The 'in' operator is used to check whether a character or a substring is present in a string or not. The expression returns a Boolean value.</p>
+
+<p>Consider, string1="PYTHON TUTORIAL"</p>
+
+<p>See the following statements:</p>
+
+<p>'K' in string1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Ans:False<br>
+'P' in string1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Ans:True<br>
+'THO' in string1&nbsp;&nbsp; &nbsp;Ans:True<br>
+'tho' in string1&nbsp;&nbsp; &nbsp;Ans:False</p>
+
+<p><strong>String slicing</strong></p>
+
+<p>To cut a substring from a string is called string slicing. Here two indices are used separated by a colon (:). A slice 3:7 means indices characters of 3rd, 4th, 5th and 6th positions. The second integer index i.e. 7 is not included. You can use negative indices for slicing.</p>
+
+<p>Consider, string1="PYTHON TUTORIAL"</p>
+
+<p>See the following statements:</p>
+
+<p>print(string1[0:5])&nbsp;&nbsp; &nbsp;Ans:PYTHO<br>
+print(string1[3:7])&nbsp;&nbsp; &nbsp;Ans:HON<br>
+print(string1[-4:-1])&nbsp;&nbsp; &nbsp;Ans:RIA</p>
+
+              
+              <div class="pull-left">
+                <a href="/python/variables_literals" title="Variables and Literals">
+                  <span class="hidden-xs">
+                    <i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Variables and Literals</div>
+                  </span>
+                </a>
+                <a href="/python/variables_literals" title="Variables and Literals">
+                  <div class="btn btn-primary btn-sm visible-xs">
+                    <i class="fa fa-angle-left"></i> Previous
+                  </div>
+                </a>
+              </div>
+              <div class="pull-right">
+                <a href="/python/type_conversion" title="Type conversions">
+                  <span class="pull-right hidden-xs">
+                    Next <i class="fa fa-angle-right"></i>
+                  </span>
+                  <div style="clear: right;" class="hidden-xs text-right">Type conversions</div>
+                </a>
+                <a href="/python/type_conversion" title="Type conversions">
+                  <div class="btn btn-sm btn-primary pull-right visible-xs">
+                    Next <i class="fa fa-angle-right"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

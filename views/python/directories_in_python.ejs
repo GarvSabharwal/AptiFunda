@@ -1,0 +1,153 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> File Handling Operations</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Directories in Python</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+ <p ><a href="/python/opening_closing_files" title="Opening and Closing Files">12.1. Opening and Closing Files</a></p>
+                        <p><a href="/python/reading_writing_files" title="Reading and Writing Files">12.2. Reading and Writing Files</a></p>
+						<p><a href="/python/renaming_deleting_files" title="Renaming and Deleting Files">12.3. Renaming and Deleting Files</a></p>
+						<p><a href="directories_in_python" style="color:#356BC3;" title="Directories in Python">12.4. Directories in Python</a></p>
+						<p><a href="/python/problem_statement_6" title="Problem statement">12.5. Problem statement</a></p>
+						<p><a href="/python/pp_11" title="Practise Problems">12.6. Practise Problems</a></p>
+
+						
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 12.4. Directories in Python </small>
+                    </h3>
+				<hr>                 <p>All files are contained within various directories, and Python has no problem handling these too. The os module has several methods that help you create, remove and change directories.</p>
+
+<p><strong>1. The mkdir() Method</strong><br>
+You can use the mkdir() method of the os module to create directories in the current directory. You need to supply an argument to this method which contains the name of the directory to be created.</p>
+
+<p><strong>SYNTAX:</strong><br>
+os.mkdir("newdir")</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to create a directory test in the current directory:<br>
+import os</p>
+
+<p># Create a directory "test"<br>
+os.mkdir("test")</p>
+
+<p><strong>2. The chdir() Method</strong><br>
+You can use the chdir() method to change the current directory. The chdir() method takes an argument, which is the name of the directory that you want to make the current directory.</p>
+
+<p><strong>SYNTAX:</strong></p>
+
+<p>os.chdir("newdir")</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to go into "/home/newdir" directory:<br>
+import os</p>
+
+<p># Changing a directory to "/home/newdir"<br>
+os.chdir("/home/newdir")</p>
+
+<p><strong>3. The getcwd() Method</strong><br>
+The getcwd() method displays the current working directory.</p>
+
+<p><strong>SYNTAX:</strong><br>
+os.getcwd()</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to give current directory:<br>
+import os</p>
+
+<p># This would give location of the current directory<br>
+os.getcwd()</p>
+
+<p><strong>4. The rmdir() Method</strong><br>
+The rmdir() method deletes the directory, which is passed as an argument in the method.</p>
+
+<p>Before removing a directory, all the contents in it should be removed.</p>
+
+<p><strong>SYNTAX:</strong><br>
+os.rmdir('dirname')</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Following is the example to remove "/tmp/test" directory. It is required to give fully qualified name of the directory, otherwise it would search for that directory in the current directory.</p>
+
+<p>#!/usr/bin/python<br>
+import os</p>
+
+<p># This would&nbsp; remove "/tmp/test"&nbsp; directory.<br>
+os.rmdir( "/tmp/test"&nbsp; )</p>
+
+<p>&nbsp;</p>
+
+          
+                  <div class="pull-left">
+                    <a href="/python/renaming_deleting_files" title="Renaming and Deleting Files"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Renaming and Deleting Files</div></span></a>
+                    <a href="/python/renaming_deleting_files" title="Renaming and Deleting Files"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_6" title="Problem statement "><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement </div> </a>
+                    <a href="/python/problem_statement_6" title="Problem statement "><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                    </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

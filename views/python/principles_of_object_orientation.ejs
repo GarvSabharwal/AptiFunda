@@ -1,0 +1,323 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 14. Object Oriented Programming in Python</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">14.4. Principles of object orientation</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+
+
+
+
+
+
+                <p>
+                  <a  href="/python/classes_and_objects" title="Classes and objects">14.1. Classes and objects</a>
+                </p>
+                <p>
+                  <a  href="/python/methods" title="Methods">14.2. Methods</a>
+                </p>
+                <p>
+                  <a href="/python/python_memory_management" title="Python memory management">14.3. Python memory management</a>
+                </p>
+                <p>
+                  <a href="/python/principles_of_object_orientation" style="color:#356BC3;" title="Principles of object orientation"><strong>14.4. Principles of object orientation</strong></a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_8" title="Problem statement">14.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_13" title="Practise Problems">14.6. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 14.4. Principles of object orientation </small> </h3>
+			  <hr>
+                  <p><strong>1. Inheritance</strong></p>
+
+<p>Inheritance is a powerful feature in object oriented programming. It refers to defining a new class with little or no modification to an existing class. The new class is called derived (or child) class and the one from which it inherits is called the base (or parent) class. Derived class inherits features from the base class, adding new features to it. This results into re-usability of code.</p>
+
+<p style="text-align: center;"><img alt="" src="./14.4Principles of object orientation_files/content_6.jpg" style="height:285px; width:274px"></p>
+
+<p><strong>Inheritance Syntax:</strong></p>
+
+<p>class Derivedclass(Baseclass):<br>
+&nbsp;&nbsp; &nbsp;…<br>
+&nbsp;&nbsp; &nbsp;…<br>
+Example:<br>
+Consider a class Shape as shown below,<br>
+#!/usr/bin/python<br>
+class Shape:<br>
+&nbsp;&nbsp;&nbsp; def __init__(self,x,y):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.x = x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.y = y<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.description = "This shape has not been described yet"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.author = "Nobody has claimed to make this shape yet"<br>
+&nbsp;&nbsp;&nbsp; def area(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return self.x * self.y<br>
+&nbsp;&nbsp;&nbsp; def perimeter(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 2 * self.x + 2 * self.y<br>
+&nbsp;&nbsp;&nbsp; def describe(self,text):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.description = text<br>
+&nbsp;&nbsp;&nbsp; def authorName(self,text):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.author = text<br>
+&nbsp;&nbsp;&nbsp; def scaleSize(self,scale):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.x = self.x * scale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.y = self.y * scale</p>
+
+<p><br>
+The below class is inherited from Square class</p>
+
+<p>class Square(Shape):<br>
+&nbsp;&nbsp;&nbsp; def __init__(self,x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.x = x<br>
+&nbsp;&nbsp; &nbsp;self.y = x</p>
+
+<p>Now,The class Square can use all the behaviours and attributes from the class Shape until and unless they are not accessible(will be discussed in encapsulation).<br>
+Use super() method in sub class to call a method from Parent class.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+class Dataset(object):<br>
+def __init__(self, data=None):<br>
+self.data = data<br>
+class MRIDataset(Dataset):<br>
+def __init__(self, data=None, parameters=None):<br>
+# here has the same effect as calling<br>
+# Dataset.__init__(self)<br>
+super(MRIDataset, self).__init__(data)<br>
+self.parameters = parameters<br>
+mri_data = MRIDataset(data=[1,2,3])</p>
+
+<p><strong>2. Multiple inheritance</strong><br>
+Multiple inheritance is possible in Python. A class can be derived from more than one base classes. The syntax for multiple inheritance is similar to single inheritance.</p>
+
+<p>Syntax:</p>
+
+<p>class Base1:<br>
+&nbsp;&nbsp; &nbsp;...<br>
+class Base2:<br>
+&nbsp;&nbsp; &nbsp;...<br>
+class MultiDerived(Base1, Base2):<br>
+&nbsp;&nbsp; &nbsp;...<br>
+Here MultiDerived class uses features of Base2 and Base1.Base1 methods are checked first and then Base2 functions follow.</p>
+
+<p><strong>3. Multilevel Inheritance</strong><br>
+On the other hand, we can inherit form a derived class. This is also called multilevel inheritance. Multilevel inheritance can be of any depth in Python.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+An example is given below,</p>
+
+<p>#!/usr/bin/python<br>
+class Base:<br>
+&nbsp;&nbsp; &nbsp;pass<br>
+class Derived1(Base):<br>
+&nbsp;&nbsp; &nbsp;pass<br>
+class Derived2(Derived1):<br>
+&nbsp;&nbsp; &nbsp;pass<br>
+Here Derived2 can use features of Base and Derived1 along with features of Derived2.</p>
+
+<p><strong>4. Encapsulation</strong><br>
+Encapsulation is the packing of data and functions into a single component.<br>
+The features of encapsulation are supported using classes in most object-oriented programming languages, although other alternatives also exist.<br>
+It allows selective hiding of properties and methods in an object by building an impenetrable wall to protect the code from accidental corruption.</p>
+
+<p>It is a language mechanism for restricting access to some of the object's components. A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data.</p>
+
+<p>The accessibility of data is done by providing access specifiers. The access specifiers we have in programming language are public,private,protected.</p>
+
+<p>In python programming language everything we write is public that means every class can access the variables/methods as they are public.</p>
+
+<p>To make the accessibility hidden from the classes other than it is defined we should make it as a private variable/method. To restrict its access to specified classes we make them as protected.</p>
+
+<p>The access specifiers' syntax(check the comments) is explained with following examples,</p>
+
+<p>#!/usr/bin/python<br>
+class Person:<br>
+&nbsp;&nbsp; &nbsp;def __init__(self):<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self.a='hari'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#public variable<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self.__b='siddartha'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#private variable<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self._c='hyd'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#protected variable</p>
+
+<p>Now let us check how they are accessible with below example,</p>
+
+<p>#!/usr/bin/python<br>
+class Person:<br>
+&nbsp;&nbsp; &nbsp;def __init__(self):<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self.a='hari'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#public variable<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self.__b='siddartha'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#private variable<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;self._c='hyd'&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#protected variable<br>
+&nbsp;&nbsp; &nbsp;def printName(self):<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print self.a<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print self.__b<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print self._c<br>
+P=Person()<br>
+P.a<br>
+P.b<br>
+P.c<br>
+P.__b<br>
+P._c<br>
+Check what happens with above code.</p>
+
+<p>Here you can't access P.b,P.c,P.__b.<br>
+To access private variable the syntax to be followed is _ClassName__variable or<br>
+_ClassName__function(). So,we can't access them as object.__variable or object.__function().</p>
+
+<p><strong>5. Polymorphism</strong><br>
+Another important attribute of an object-oriented programming language is polymorphism: the ability to use the same syntax for objects or methods of different types. (Strictly speaking, this is ad-hoc polymorphism.) For example, in Python, the square bracket operator is used to perform indexing of various sequence types (list[3], dict["foo"]); polymorphism allows us to define our own types, as classes, that emulate built-in Python types like sequences and which therefore can use e.g. square brackets for indexing.</p>
+
+<p>This example describes about polymorphism,</p>
+
+<p>#!/usr/bin/python<br>
+class Animal:<br>
+&nbsp;&nbsp;&nbsp; def Name(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pass<br>
+&nbsp;&nbsp;&nbsp; def Sleep(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'sleep'<br>
+&nbsp;&nbsp;&nbsp; def MakeNoise(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pass<br>
+class Dog(Animal):<br>
+&nbsp;&nbsp;&nbsp; def Name(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'I am a dog'<br>
+&nbsp;&nbsp;&nbsp; def MakeNoise(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'Woof'<br>
+class Cat(Animal):<br>
+&nbsp;&nbsp;&nbsp; def Name(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'I am cat'<br>
+&nbsp;&nbsp;&nbsp; def MakeNoise(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'Meow'<br>
+class Lion(Animal):<br>
+&nbsp;&nbsp;&nbsp; def Name(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'I am a lion'<br>
+&nbsp;&nbsp;&nbsp; def MakeNoise(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print 'Roar'<br>
+class TestAnimals:<br>
+&nbsp;&nbsp;&nbsp; def PrintName(self,animal):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animal.Name()<br>
+&nbsp;&nbsp;&nbsp; def GotoSleep(self,animal):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animal.Sleep()<br>
+&nbsp;&nbsp;&nbsp; def MakeNoise(self,animal):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animal.MakeNoise()</p>
+
+<p><br>
+TestAnimals=TestAnimals()<br>
+dog=Dog()<br>
+cat=Cat()<br>
+lion=Lion()<br>
+TestAnimals.PrintName(dog)<br>
+TestAnimals.GotoSleep(dog)<br>
+TestAnimals.MakeNoise(dog)<br>
+TestAnimals.PrintName(cat)<br>
+TestAnimals.GotoSleep(cat)<br>
+TestAnimals.MakeNoise(cat)<br>
+TestAnimals.PrintName(lion)<br>
+TestAnimals.GotoSleep(lion)<br>
+TestAnimals.MakeNoise(lion)</p>
+
+<p>As you can see same methods are repeated in different classes, It is called method overloading.</p>
+
+<p>The output of above program is,<br>
+I am a dog<br>
+sleep<br>
+Woof<br>
+I am cat<br>
+sleep<br>
+Meow<br>
+I am a lion<br>
+sleep<br>
+Roar</p>
+
+<p>Suppose you've created a Vector class to represent two-dimensional vectors, what happens when you use the plus operator to add them? Most likely Python will not work as desired.</p>
+
+<p>You could, however, define the __add__ method in your class to perform vector addition and then the plus operator would behave as per expectation. This is called as operator overloading.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+#!/usr/bin/python<br>
+class Vector:<br>
+&nbsp;&nbsp; def __init__(self, a, b):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.a = a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.b = b</p>
+
+<p>&nbsp;&nbsp; def __str__(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 'Vector (%d, %d)' % (self.a, self.b)<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp; def __add__(self,other):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return Vector(self.a + other.a, self.b + other.b)</p>
+
+<p>v1 = Vector(2,10)<br>
+v2 = Vector(5,-2)<br>
+print v1 + v2<br>
+When the above code is executed, it produces the following result:<br>
+Vector(7,8)</p>
+
+                  <div class="pull-left">
+                    <a href="/python/python_memory_management" title="Python memory management"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Python memory management</div></span></a>
+                    <a href="/python/python_memory_management" title="Python memory management"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_8" title="Problem statement "><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement </div> </a>
+                    <a href="/python/problem_statement_8" title="Problem statement "><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

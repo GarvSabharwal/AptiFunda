@@ -1,0 +1,131 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python--Additional Data Storage Objects</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Dictionaries</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+
+
+
+
+
+
+
+
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p>
+                  <a href="/python/lists" title="Lists">9.1. Lists</a>
+                </p>
+                <p>
+                  <a href="/python/tuples" title="Tuples">9.2. Tuples</a>
+                </p>
+                <p>
+                  <a href="/python/diff_list_and_tuple" title="Differences between list and tuple">9.3. Differences between list and tuple</a>
+                </p>
+                <p>
+                  <a href="/python/dictionaries" title="Dictionaries">9.4. Dictionaries</a>
+                </p>
+                <p>
+                  <a href="/python/sets" title="Sets">9.5. Sets</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_3" style="color:#356BC3;" title="Problem statement">9.6. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_8" title="Practise Problems">9.7. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 9.6. Problem statement </small> </h3>
+						<hr>
+                  <p>Consider the following,<br>
+animals = { 'a':['art'], 'b': ['balloon'], 'c': ['coat'],'d'=['den','dog','deer']}<br>
+write a function to find the key that has maximum values Ex:maxani(animals) output is 'd'.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>#!/usr/bin/python<br>
+animals = { 'a': ['art'], 'b': ['balloon'], 'c': ['coat'], 'd': ['den','dog','deer']}<br>
+def biggest(aDict):<br>
+&nbsp;&nbsp;&nbsp; result = None<br>
+&nbsp;&nbsp;&nbsp; biggestValue = 0<br>
+&nbsp;&nbsp;&nbsp; for key in aDict.keys():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if len(aDict[key]) &gt;= biggestValue:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = key<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; biggestValue = len(aDict[key])<br>
+&nbsp;&nbsp;&nbsp; return result<br>
+print (biggest(animals))</p>
+
+                  <div class="pull-left">
+                    <a href="/python/sets" title="Sets"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Sets</div></span></a>
+                    <a href="/python/sets" title="Sets"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/pp_8" title="Practise Problems"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/python/pp_8" title="Practise Problems"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

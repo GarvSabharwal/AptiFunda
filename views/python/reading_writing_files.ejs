@@ -1,0 +1,174 @@
+  <% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> File Handling Operations</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">Opening and Closing Files</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+						<p ><a href="/python/opening_closing_files" title="Opening and Closing Files">12.1. Opening and Closing Files</a></p>
+                        <p><a href="/python/reading_writing_files" style="color:#356BC3;" title="Reading and Writing Files">12.2. Reading and Writing Files</a></p>
+						<p><a href="/python/renaming_deleting_files" title="Renaming and Deleting Files">12.3. Renaming and Deleting Files</a></p>
+						<p><a href="directories_in_python" title="Directories in Python">12.4. Directories in Python</a></p>
+						<p><a href="/python/problem_statement_6" title="Problem statement">12.5. Problem statement</a></p>
+						<p><a href="/python/pp_11" title="Practise Problems">12.6. Practise Problems</a></p>
+
+						
+
+
+
+
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 12.2. Reading and Writing Files </small> </h3>
+						<hr>
+                  <p>The file object provides a set of access methods to make our lives easier. We would see how to use read() and write() methods to read and write files.</p>
+
+<p><strong>1. The write() Method</strong></p>
+
+<p>The write() method writes any string to an open file. It is important to note that Python strings can have binary data and not just text.</p>
+
+<p>The write() method does not add a newline character ('\n') to the end of the string:</p>
+
+<p><strong>SYNTAX:</strong><br>
+fileObject.write(string);</p>
+
+<p>Here, passed parameter is the content to be written into the opened file.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+#!/usr/bin/python<br>
+# Open a file<br>
+fo = open("foo.txt", "wb")<br>
+fo.write( "Python is a great language.\n Yeah its great!!\n");</p>
+
+<p># Close opened file<br>
+fo.close()<br>
+The above method would create foo.txt file and would write given content in that file and finally it would close that file. If you would open this file, it would have following content.</p>
+
+<p>Python is a great language.<br>
+Yeah its great!!</p>
+
+<p><strong>2. The read() Method</strong><br>
+The read() method reads a string from an open file. It is important to note that Python strings can have binary data and not just text.</p>
+
+<p><strong>SYNTAX:</strong></p>
+
+<p>fileObject.read([count]);<br>
+Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if count is missing, then it tries to read as much as possible, maybe until the end of file.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Let's take a file foo.txt, which we have created above.<br>
+#!/usr/bin/python<br>
+# Open a file<br>
+fo = open("foo.txt", "r+")<br>
+str = fo.read(10);<br>
+print "Read String is : ", str<br>
+# Close opened file<br>
+fo.close()<br>
+This would produce the following result:</p>
+
+<p>Read String is :&nbsp; Python is</p>
+
+<p><strong>3. File Positions</strong></p>
+
+<p>The tell() method tells you the current position within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file.</p>
+
+<p>The seek(offset[, from]) method changes the current file position. The offset argument indicates the number of bytes to be moved. The from argument specifies the reference position from where the bytes are to be moved.</p>
+
+<p>If from is set to 0, it means use the beginning of the file as the reference position and 1 means use the current position as the reference position and if it is set to 2 then the end of the file would be taken as the reference position.</p>
+
+<p><strong>EXAMPLE:</strong><br>
+Let's take a file foo.txt, which we have created above.</p>
+
+<p>#!/usr/bin/python<br>
+# Open a file<br>
+fo = open("foo.txt", "r+")<br>
+str = fo.read(10);<br>
+print "Read String is : ", str</p>
+
+<p># Check current position<br>
+position = fo.tell();<br>
+print "Current file position : ", position</p>
+
+<p># Reposition pointer at the beginning once again<br>
+position = fo.seek(0, 0);<br>
+str = fo.read(10);<br>
+print "Again read String is : ", str<br>
+# Close opened file<br>
+fo.close()</p>
+
+<p>This would produce the following result:</p>
+
+<p>Read String is :&nbsp; Python is<br>
+Current file position :&nbsp; 10<br>
+Again read String is :&nbsp; Python is</p>
+
+<p>&nbsp;</p>
+
+                  <div class="pull-left">
+                    <a href="/python/opening_closing_files" title="Opening and Closing Files"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Opening and Closing Files</div></span></a>
+                    <a href="/python/opening_closing_files" title="Opening and Closing Files"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/renaming_deleting_files" title="Renaming and Deleting Files"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Renaming and Deleting Files</div> </a>
+                    <a href="/python/renaming_deleting_files" title="Renaming and Deleting Files"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

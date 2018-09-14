@@ -1,0 +1,246 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 9. Additional Data Storage Objects</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">9.1. Lists</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+
+
+
+
+
+
+
+
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p>
+                  <a href="/python/lists" style="color:#356BC3;" title="Lists">9.1. Lists</a>
+                </p>
+                <p>
+                  <a href="python/tuples" title="Tuples">9.2. Tuples</a>
+                </p>
+                <p>
+                  <a href="/python/diff_list_and_tuple" title="Differences between list and tuple">9.3. Differences between list and tuple</a>
+                </p>
+                <p>
+                  <a href="/python/dictionaries" title="Dictionaries">9.4. Dictionaries</a>
+                </p>
+                <p>
+                  <a href="/python/sets" title="Sets">9.5. Sets</a>
+                </p>
+                <p>
+                  <a href="python/problem_statement_3" title="Problem statement">9.6. Problem statement</a>
+                </p>
+                <p>
+                  <a href="python/pp_8" title="Practise Problems">9.7. Practise Problems</a>
+                </p>
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 9.1. Lists </small> </h3>
+            <hr>
+                  <p><strong>Overview</strong><br>
+The list type is a container that holds a number of other objects, in a given order. The list type implements the sequence protocol, and also allows you to add and remove objects from the sequence.</p>
+
+<p><strong>Creating Lists</strong><br>
+To create a list, put a number of expressions in square brackets:</p>
+
+<p>L = [ ]<br>
+L = [expression, ...]</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+L=[1,2,3,4,5,6,7,8]<br>
+list1 = ['physics', 'chemistry', 1997, 2000]<br>
+list2 = [1, 2, 3, 4, 5 ]<br>
+list3 = ["a", "b", "c", "d"]<br>
+listinlist=[1,2,[3,4,5],4,5]<br>
+Like string indices, list indices start at 0, and lists can be sliced, concatenated and so on.</p>
+
+<p><strong>Accessing Lists</strong></p>
+
+<p>Lists implement the standard sequence interface; len(L) returns the number of items in the list, L[i] returns the item at index i (the first item has index 0), and L[i:j] returns a new list, containing the objects between i and j.</p>
+
+<p><strong>Example:</strong><br>
+list1 = ['india','australia','south africa','west indies']<br>
+print list1[0],"has brighter chances to win the world cup"<br>
+print "But may face competition from",list1[2]</p>
+
+<p><strong>Output of the program is:</strong><br>
+india has brighter chances to win the world cup</p>
+
+<p>But may face competition from south africa</p>
+
+<p><strong>Looping over Lists</strong><br>
+The for-in statement makes it easy to loop over the items in a list:</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+list1 = ['physics', 'chemistry', 1997, 2000]<br>
+for element in list1:<br>
+&nbsp;&nbsp;&nbsp; print element</p>
+
+<p><strong>Output:</strong><br>
+physics<br>
+chemistry<br>
+1997<br>
+2000</p>
+
+<p>If you need only the index, use range and len:</p>
+
+<p>To understand this here is an example,</p>
+
+<p>#!/usr/bin/python<br>
+list1 = ['physics', 'chemistry', 1997, 2000]<br>
+for index in range(len(list1)):<br>
+&nbsp;&nbsp;&nbsp; print index</p>
+
+<p>Output is:<br>
+0 1 2 3<br>
+&nbsp;<br>
+<strong>Modifying Lists</strong><br>
+We can update single or multiple elements of lists by giving the slice on the left-hand side of the assignment operator, and you can add to elements in a list with the append() method. Following is a simple example:</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+List1=['a','b',1,'c']<br>
+List1[2]='d'<br>
+print List1</p>
+
+<p><strong>Output of the program is:</strong><br>
+['a', 'b', 'd', 'c']</p>
+
+<p>We can also delete an element from a list by using del operator.<br>
+<strong>Example:</strong><br>
+#!/usr/bin/python<br>
+List1=['a','b',1,'c']<br>
+del List1[2]<br>
+print List1</p>
+
+<p><strong>Output:</strong><br>
+['a', 'b', 'c']</p>
+
+<p><strong>Basic List operations</strong><br>
+Lists respond to the + and * operators much like strings; they mean concatenation and repetition here too, except that the result is a new list, not a string.<br>
+In fact, lists respond to all of the general sequence operations we used on strings.</p>
+
+<p style="text-align:center"><img alt="" src="./9.1Lists_files/content_1.png" style="height:195px; width:383px"></p>
+
+<p><strong>Built-in functions</strong></p>
+
+<p>Python includes the following list functions:</p>
+
+<p><strong>1.cmp(list1, list2)</strong><br>
+Compares elements of both lists.</p>
+
+<p><strong>2.len(list)</strong><br>
+Gives the total length of the list.</p>
+
+<p><strong>3.max(list)</strong><br>
+Returns item from the list with max value.</p>
+
+<p><strong>4.min(list)</strong><br>
+Returns item from the list with min value.</p>
+
+<p><strong>5.list(seq)</strong><br>
+Converts a tuple into list.</p>
+
+<p><strong>Built-in methods</strong></p>
+
+<p>Python includes following list methods</p>
+
+<p><strong>1.list.append(obj)</strong><br>
+Appends object obj to list</p>
+
+<p><strong>2.list.count(obj)</strong><br>
+Returns count of how many times obj occurs in list</p>
+
+<p><strong>3.list.extend(seq)</strong><br>
+Appends the contents of seq to list</p>
+
+<p><strong>4.list.index(obj)</strong><br>
+Returns the lowest index in list that obj appears</p>
+
+<p><strong>5.list.insert(index, obj)</strong><br>
+Inserts object obj into list at offset index</p>
+
+<p><strong>6.list.pop(obj=list[-1])</strong><br>
+Removes and returns last object or obj from list</p>
+
+<p><strong>7.list.remove(obj)</strong><br>
+Removes object the obj from list</p>
+
+<p><strong>8.list.reverse()</strong><br>
+Reverses the objects of list in place</p>
+
+<p><strong>9.list.sort()</strong><br>
+Sorts the objects of list</p>
+
+               
+                  <div class="pull-right">
+                    <a href="/python/tuples" title="Tuples"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Tuples</div> </a>
+                    <a href="/python/tuples" title="Tuples"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

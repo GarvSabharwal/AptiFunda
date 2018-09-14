@@ -1,0 +1,161 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 9. Additional Data Storage Objects</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Dictionaries</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+
+
+
+
+
+
+
+
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p>
+                  <a href="/python/lists" title="Lists">9.1. Lists</a>
+                </p>
+                <p>
+                  <a href="/python/tuples" title="Tuples">9.2. Tuples</a>
+                </p>
+                <p>
+                  <a href="/python/diff_list_and_tuple" style="color:#356BC3;" title="Differences between list and tuple">9.3. Differences between list and tuple</a>
+                </p>
+                <p>
+                  <a href="/python/dictionaries" title="Dictionaries">9.4. Dictionaries</a>
+                </p>
+                <p>
+                  <a href="/python/sets" title="Sets">9.5. Sets</a>
+                </p>
+                <p>
+                  <a href="" title="Problem statement">9.6. Problem statement</a>
+                </p>
+                <p>
+                  <a href="" title="Practise Problems">9.7. Practise Problems</a>
+                </p>
+
+              </div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 9.3. Differences between list and tuple </small>
+                    </h3>
+				<hr>                 <p><strong>1. Size</strong></p>
+
+<p>a = tuple(range(1000))<br>
+b = list(range(1000))</p>
+
+<p>a.__sizeof__() # 8024<br>
+b.__sizeof__() # 9088</p>
+
+<p>Due to the smaller size of a tuple operation with it a bit faster but not that much to mention about until you have a huge amount of elements.</p>
+
+<p><strong>2. Permitted operations</strong></p>
+
+<p>b = [1,2]&nbsp; &nbsp;<br>
+b[0] = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # [3, 2]</p>
+
+<p>a = (1,2)<br>
+a[0] = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Error<br>
+that also mean that you can't delete element or sort tuple.<br>
+At the same time you could add new element to both list and tuple with the only difference that you will change id of the tuple by adding element</p>
+
+<p>a = (1,2)<br>
+b = [1,2] &nbsp;</p>
+
+<p>id(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 140230916716520<br>
+id(b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 748527696</p>
+
+<p>a += (3,)&nbsp;&nbsp;&nbsp; # (1, 2, 3)<br>
+b += [3]&nbsp;&nbsp;&nbsp;&nbsp; # [1, 2, 3]</p>
+
+<p>id(a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 140230916878160<br>
+id(b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 748527696<br>
+Usage</p>
+
+<p><strong>3. Appending to list and tuple</strong></p>
+
+<p>a = (1,2)<br>
+b = [1,2]</p>
+
+<p>a.append(3)&nbsp;&nbsp;&nbsp; #Error(Tuple has no attribute appened.<br>
+b.append(3)&nbsp;&nbsp;&nbsp; #[1,2,3]</p>
+
+<p><strong>4. You can't use list as a dictionary identifier</strong></p>
+
+<p>a = (1,2)<br>
+b = [1,2]</p>
+
+<p>c = {a: 1}&nbsp;&nbsp;&nbsp;&nbsp; # OK<br>
+c = {b: 1}&nbsp;&nbsp;&nbsp;&nbsp; # Error</p>
+
+                  <div class="pull-left">
+                    <a href="/python/tuples" title="Tuples"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Tuples</div></span></a>
+                    <a href="/python/tuples" title="Tuples"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/dictionaries" title="Dictionaries"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Dictionaries</div> </a>
+                    <a href="/python/dictionaries" title="Dictionaries"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

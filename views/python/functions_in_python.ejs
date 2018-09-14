@@ -1,0 +1,187 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Modularity and Code reusability – Functions</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Functions in Python</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/functions_in_python" style="color:#356BC3;" title="Functions in Python">10.1. Functions in Python</a>
+                </p>
+                <p>
+                  <a href="/python/pass_by_refrence" title="Pass by reference">10.2. Pass by reference</a>
+                </p>
+                <p>
+                  <a href="/python/function_arguments" title="Function arguments">10.3. Function arguments</a>
+                </p>
+                <p>
+                  <a href="/python/return_statement_scope_variables" title="Return statement and Scope of Variables">10.4. Return statement and Scope of Variables</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_4" title="Problem statement">10.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_9" title="Practise Problems">10.6. Practise Problems</a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 10.1. Functions in Python </small> </h3>
+            <hr>
+                  <p>A function is a piece of code in a program. The function performs a specific task. The advantages of using functions are:</p>
+
+<ul>
+	<li>&nbsp;Reducing duplication of code</li>
+	<li>&nbsp;Decomposing complex problems into simpler pieces</li>
+	<li>&nbsp;Improving clarity of the code</li>
+	<li>&nbsp;Reuse of code</li>
+	<li>&nbsp;Information hiding</li>
+</ul>
+
+<p>Functions in Python are first-class citizens. It means that functions have equal status with other objects in Python. Functions can be assigned to variables, stored in collections or passed as arguments. This brings additional flexibility to the language.<br>
+There are two basic types of functions. Built-in functions and user defined ones. The built-in functions are part of the Python language. Examples&nbsp; are: dir(), len() or abs(). The user defined functions are functions created with the def keyword.</p>
+
+<p><strong>Defining a function</strong></p>
+
+<p>You can define functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+
+<p>Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).</p>
+
+<p>Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.</p>
+
+<p>The first statement of a function can be an optional statement - the documentation string of the function or docstring.</p>
+
+<p>The code block within every function starts with a colon (:) and is indented.</p>
+
+<p>The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<p>def functionname( parameters ):<br>
+&nbsp;&nbsp; "function_docstring"<br>
+&nbsp;&nbsp; function_suite<br>
+&nbsp;&nbsp; return [expression]</p>
+
+<p>By default, parameters have a positional behaviour and you need to inform them in the same order that they were defined.</p>
+
+<p>Example:<br>
+here is a function that prints the words "hello" on screen, and then returns the number '1234' to the main program:</p>
+
+<p>#!/usr/bin/python<br>
+def hello():<br>
+&nbsp;&nbsp;&nbsp; print "hello"<br>
+&nbsp;&nbsp;&nbsp; return 1234</p>
+
+<p><strong>Calling a function</strong></p>
+
+<p>Defining a function only gives it a name, specifies the parameters that are to be included in the function and structures the blocks of code.<br>
+Once the basic structure of a function is finalized, you can execute it by calling it from another function or directly from the Python prompt. Following is the example to call hello() function:<br>
+# Below is the function<br>
+def hello():<br>
+&nbsp;&nbsp;&nbsp; print "hello"<br>
+&nbsp;&nbsp;&nbsp; return 1234</p>
+
+<p># And here is the function being used<br>
+print hello()<br>
+When the above code is executed, it produces the following result: &nbsp;<br>
+hello<br>
+1234</p>
+
+<p><strong>Accessing python documented comments</strong><br>
+We can access the documented comments by using __doc__ attribute as shown below,</p>
+
+<p>def func(param):<br>
+&nbsp;&nbsp; &nbsp;'''This is a documented function<br>
+&nbsp;&nbsp; &nbsp;with some comments.<br>
+&nbsp;&nbsp; &nbsp;'''<br>
+&nbsp;&nbsp; &nbsp;pass</p>
+
+<p>print func.__doc__</p>
+
+<p>Output:<br>
+This is a documented function<br>
+&nbsp; with some comments.</p>
+
+                  <div class="pull-right">
+                    <a href="/python/pass_by_refrence" title="Pass by reference"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Pass by reference</div> </a>
+                    <a href="/python/pass_by_refrence" title="Pass by reference"><div class="btn btn-sm btn-success pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

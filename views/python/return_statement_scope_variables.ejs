@@ -1,0 +1,194 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Modularity and Code reusability – Functions</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Functions in Python</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                 
+                  <a href="/python/functions_in_python" title="Functions in Python">10.1. Functions in Python</a>
+                </p>
+                <p>
+                  <a href="/python/pass_by_refrence" title="Pass by reference">10.2. Pass by reference</a>
+                </p>
+                <p>
+                  <a href="/python/function_arguments" title="Function arguments">10.3. Function arguments</a>
+                </p>
+                <p>
+                  <a href="/python/return_statement_scope_variables" style="color:#356BC3;" title="Return statement and Scope of Variables">10.4. Return statement and Scope of Variables</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_4" title="Problem statement">10.5. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_9" title="Practise Problems">10.6. Practise Problems</a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted">10.4. Return statement and Scope of Variables</small>
+                    </h3>
+				<hr>
+                  <p><strong>Return statement</strong></p>
+
+<p>A function is created to do a specific task. Often there is a result from such a task. The return keyword is used to return values from a function. A function may or may not return a value. If a function does not have a return keyword, it will send a None value.</p>
+
+<p>All the above examples are not returning any value, but if you like you can return a value from a function as follows:</p>
+
+<p># Function definition is here<br>
+def sum( arg1, arg2 ):<br>
+&nbsp;&nbsp; # Add both the parameters and return them."<br>
+&nbsp;&nbsp; total = arg1 + arg2<br>
+&nbsp;&nbsp; print "Inside the function : ", total<br>
+&nbsp;&nbsp; return total;</p>
+
+<p># Now you can call sum function<br>
+total = sum( 10, 20 );<br>
+print "Outside the function : ", total</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Inside the function :&nbsp; 30<br>
+Outside the function :&nbsp; 30</p>
+
+<p><strong>Scope of variables</strong><br>
+All variables in a program may not be accessible at all locations in that program. This depends on where you have declared a variable.</p>
+
+<p>The scope of a variable determines the portion of the program where you can access a particular identifier. There are two basic scopes of variables in Python:</p>
+
+<ul>
+	<li>&nbsp; Global variables</li>
+	<li>&nbsp; Local variables</li>
+</ul>
+
+<p><strong>Global vs. Local variables:</strong></p>
+
+<p>Variables that are defined inside a function body have a local scope, and those defined outside have a global scope.<br>
+This means that local variables can be accessed only inside the function in which they are declared, whereas global variables can be accessed throughout the program body by all functions. When you call a function, the variables declared inside it are brought into scope. Following is a simple example:</p>
+
+<p>name = "Jack"<br>
+def f():<br>
+&nbsp;&nbsp; name = "Robert"<br>
+&nbsp;&nbsp; print "Within function", name<br>
+print "Outside function", name<br>
+f()</p>
+
+<p>A variable defined in a function body has a&nbsp;local&nbsp;scope. It is valid only within the body of the function.</p>
+
+<p>Output will be:<br>
+Outside function Jack<br>
+Within function Robert</p>
+
+<p>By default, we can get the contents of a&nbsp;global&nbsp;variable inside the body of a function. But if we want to change a global variable in a function, we must use the global keyword.</p>
+
+<p><u><strong>Recursion</strong></u></p>
+
+<p>We know that in Python, a function can call other functions. It is even possible for the function to call itself. These type of construct are termed as recursive functions.</p>
+
+<p>Following is an example of recursive function to find the factorial of an integer. Factorial of a number is the product of all the integers from 1 to that number. For example, the factorial of 6 (denoted as 6!) is 1*2*3*4*5*6 = 720.</p>
+
+<p>#!/usr/bin/python<br>
+def fact(x):<br>
+&nbsp;&nbsp; &nbsp;if x == 1:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return 1<br>
+&nbsp;&nbsp; &nbsp;else:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return (x * fact(x-1))<br>
+num = int(raw_input("Enter a number: "))<br>
+if num &gt;= 1:<br>
+&nbsp;&nbsp; &nbsp;print("The factorial of ", num, "is", fact(num))</p>
+
+<p>output will be:</p>
+
+<p>Enter a number: 4<br>
+The factorial of 4 is 24 .</p>
+
+                  <div class="pull-left">
+                    <a href="/python/function_arguments" title="Function arguments"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Function arguments</div></span></a>
+                    <a href="/python/function_arguments" title="Function arguments"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/problem_statement_4" title="Problem statement"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Problem statement</div> </a>
+                    <a href="/python/problem_statement_4" title="Problem statement"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+

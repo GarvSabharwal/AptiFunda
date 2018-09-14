@@ -1,0 +1,212 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> 9. Additional Data Storage Objects</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">9.4. Dictionaries</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+						
+
+
+
+
+
+
+
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+ <p><a href="" title="Lists">9.1. Lists</a></p>
+                        <p><a href="" title="Tuples">9.2. Tuples</a></p>
+						<p><a href="/python/diff_list_and_tuple" title="Differences between list and tuple">9.3. Differences between list and tuple</a></p>
+						<p><a href="/python/dictionaries" style="color:#356BC3;" title="Dictionaries"><strong>9.4. Dictionaries</strong></a></p>
+						<p><a href="/python/sets" title="Sets">9.5. Sets</a></p>
+						<p><a href="" title="Problem statement">9.6. Problem statement</a></p>
+						<p><a href="" title="Practise Problems">9.7. Practise Problems</a></p>
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 9.4. Dictionaries </small>
+                    </h3>
+				<hr>                 <p>A dictionary is mutable and is another container type that can store any number of Python objects, including other container types. Dictionaries consist of pairs (called items) of keys and their corresponding values.</p>
+
+<p>Python dictionaries are also known as associative arrays or hash tables. The general notation of a dictionary is as follows:<br>
+diction = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}<br>
+The things on left side of “:” are keys and right side are values.</p>
+
+<p><strong>Note:</strong><br>
+Keys of a particular dictionary are unique while values may not be.<br>
+The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.</p>
+
+<p><strong>Operations on dictionaries</strong></p>
+
+<p>Consider below notation as an example,<br>
+d={1:'one',2:'two',3:'three',4:'four'}</p>
+
+<p>Now to extract keys from dictionary Keys() operator can be used as shown below<br>
+d.keys()</p>
+
+<p>Then it results output as shown<br>
+[1,2,3,4]</p>
+
+<p>In the same way to extract values from dictionary values() can be used as shown</p>
+
+<p>d.values()<br>
+Then it results output as shown<br>
+['one','two','three','four']</p>
+
+<p><strong>1. Adding new elements to a dictionary</strong></p>
+
+<p>To add new element to a dictionary assign a value by providing a key as shown<br>
+d[5]='five'<br>
+now,d contains five pairs of keys and values.</p>
+
+<p>The elements of d are as follows:<br>
+{1:'one',2:'two',3:'three',4:'four',5:'five'}</p>
+
+<p><strong>2. Deleting a key from a dictionary</strong><br>
+del operator is used to delete a key and corresponding value from the dictionary</p>
+
+<p>example:<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+del d[2]<br>
+print d</p>
+
+<p>Output:<br>
+{1: 'one', 3: 'three', 4: 'four', 5: 'five'}</p>
+
+<p><strong>3. has_key() operator</strong><br>
+We can check the existence of a key by using has_key operator</p>
+
+<p>example:<br>
+#!/usr/bin/python<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+print d.has_key(1)<br>
+print d.has_key(6)</p>
+
+<p>Output would be as shown,<br>
+True<br>
+False</p>
+
+<p>We can also use condition as shown below to check whether key exists,<br>
+1 in d&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; #True as 1 is a key contained in d<br>
+6 in d &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; #False as 6 is not available in keys of dictionary d</p>
+
+<p><strong>4. Copying a dictionary</strong><br>
+A dictionary can be copied with method copy()</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+w=d.copy()<br>
+print w</p>
+
+<p>Output would be,<br>
+{1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}</p>
+
+<p><strong>5. Merging two dictionaries</strong><br>
+What about concatenating dictionaries, like we did with lists? There is something similar for dictionaries: the update method update() merges the keys and values of one dictionary into another, overwriting values of the same key:</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+w={2:'to',8:'eight'}<br>
+d.update(w)<br>
+print d</p>
+
+<p>Output would be,<br>
+{1: 'one', 2: 'to', 3: 'three', 4: 'four', 5: 'five', 8: 'eight'}</p>
+
+<p><strong>6. Clearing contents of dictionary</strong><br>
+The content of a dictionary can be cleared with the method clear(). The dictionary is not deleted, but set to an empty dictionary:</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+d.clear()<br>
+print d</p>
+
+<p>Output would be<br>
+{}</p>
+
+<p><strong>7. Connection between Lists and Dictionaries</strong><br>
+If we have a dictionary</p>
+
+<p>{"list":"List", "dictionary":"dict", "function":"Func"}</p>
+
+<p>we could turn this into a list with two-tuples:</p>
+
+<p>[("list","List"), ("dictionary","dict"), ("function","Func")]</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+d={1:'one',2:'two',3:'three',4:'four',5:'five'}<br>
+print d.items()</p>
+
+<p>Output would be,<br>
+[(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four'), (5, 'five')]</p>
+
+                  <div class="pull-left">
+                    <a href="/python/diff_list_and_tuple" title="Differences between list and tuple"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Differences between list and tuple</div></span></a>
+                    <a href="/python/diff_list_and_tuple" title="Differences between list and tuple"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/sets" title="Sets"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Sets</div> </a>
+                    <a href="/python/sets" title="Sets"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

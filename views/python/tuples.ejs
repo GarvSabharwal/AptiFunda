@@ -1,0 +1,193 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python--Additional Data Storage Objects</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Dictionaries</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+          <!--Card content-->
+
+
+
+
+
+
+
+
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p>
+                  <a href="/python/lists" title="Lists">9.1. Lists</a>
+                </p>
+                <p>
+                  <a href="/python/tuples" style="color:#356BC3;" title="Tuples">9.2. Tuples</a>
+                </p>
+                <p>
+                  <a href="/python/diff_list_and_tuple" title="Differences between list and tuple">9.3. Differences between list and tuple</a>
+                </p>
+                <p>
+                  <a href="/python/dictionaries" title="Dictionaries">9.4. Dictionaries</a>
+                </p>
+                <p>
+                  <a href="/python/sets" title="Sets">9.5. Sets</a>
+                </p>
+                <p>
+                  <a href="" title="Problem statement">9.6. Problem statement</a>
+                </p>
+                <p>
+                  <a href="" title="Practise Problems">9.7. Practise Problems</a>
+                </p>
+
+              </div>
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">9.2. Tuples</small>
+                    </h3>
+				<hr>
+                  <p><strong>Overview</strong><br>
+A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. The only difference is that tuples can't be changed i.e., tuples are immutable and tuples use parentheses and lists use square brackets.</p>
+
+<p><strong>Creating tuples</strong></p>
+
+<p>Creating a tuple is as simple as putting different comma-separated values and optionally you can put these comma-separated values between parentheses also.</p>
+
+<p><strong>For example:</strong><br>
+tup1 = ('p', 'c', 19, 20)<br>
+tup2 = (1, 2, 3, 4, 5 )<br>
+tup3 = "a", "b", "c", "d"<br>
+tup4 = 'a','b','c','d'<br>
+The empty tuple is written as two parentheses containing nothing:</p>
+
+<p>tup1 = ()<br>
+To write a tuple containing a single value you have to include a comma, even though there is only one value to differentiate it with other data types:</p>
+
+<p>tup1 = (50,)</p>
+
+<p><strong>Accessing tuples</strong></p>
+
+<p>To access values in tuple, use the square brackets for slicing along with the index or indices to obtain value available at that index. Following is a simple example:<br>
+#!/usr/bin/python<br>
+t=(1,2,3)<br>
+print t[0]<br>
+print t+(t[0],)</p>
+
+<p>Output would be:<br>
+1<br>
+(1, 2, 3, 1)</p>
+
+<p><strong>Modifying tuples</strong></p>
+
+<p>Tuples are immutable which means you cannot update or change the values of tuple elements. You are able to take portions of existing tuples to create new tuples.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+t=(1,2,3,4)<br>
+t[0]=10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #not a valid operation on tuple<br>
+t2=t+t&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;#This is possible<br>
+and t2 would be (1,2,3,4,1,2,3,4)</p>
+
+<p>Removing individual tuple elements is not possible.But, using del operator it is possible to delete whole tuple object.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+t=(103,6527,10)<br>
+del t<br>
+print t</p>
+
+<p><strong>Output:</strong><br>
+Name Error: name 't' is not defined.</p>
+
+<p><strong>Basic tuple operations</strong><br>
+Tuples respond to the + and * operators much like strings; they mean concatenation and repetition here too, except that the result is a new tuple, not a string.</p>
+
+<p style="text-align: center;"><img alt="" src="./9.2Tuples_files/content_1.png" style="height:200px; width:550px"></p>
+
+<p><strong>Built-in tuple functions</strong></p>
+
+<p>Python includes following tuple functions</p>
+
+<p><strong>1.cmp(tuple1, tuple2)</strong><br>
+Compares elements of both tuples.</p>
+
+<p><strong>2.len(tuple)</strong><br>
+Gives the total length of the tuple.</p>
+
+<p><strong>3.max(tuple)</strong><br>
+Returns item from the tuple with max value.</p>
+
+<p><strong>4.min(tuple)</strong><br>
+Returns item from the tuple with min value.</p>
+
+<p><strong>5.tuple(seq)</strong><br>
+Converts a list into tuple</p>
+
+               
+                  <div class="pull-left">
+                    <a href="/python/lists" title="Lists"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Lists</div></span></a>
+                    <a href="/python/lists" title="Lists"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/diff_list_and_tuple" title="Differences between list and tuple"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Differences between list and tuple</div> </a>
+                    <a href="/python/diff_list_and_tuple" title="Differences between list and tuple"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+

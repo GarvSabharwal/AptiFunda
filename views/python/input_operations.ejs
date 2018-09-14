@@ -1,0 +1,174 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">
+            Python -->
+            How user interact with the application? - I/O operations
+          </small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Input operations</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p >
+                  <a href="/python/input_operations" style="color:#356BC3;" title="Input operations">3.1. Input operations</a>
+                </p>
+
+                <p>
+                  <a href="/python/output_operations" title="Output Operations">3.2. Output Operations</a>
+                </p>
+                <p>
+                  <a href="/python/pp_2" title="Practise Problems">
+                    3.3. Practise Problems
+                  </a>
+                </p>
+
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted">
+                3.1. Input operations </small> </h3>
+            <hr>
+                  <p>Python has two functions designed for accepting data directly from the user.</p>
+
+<p>They are,<br>
+1.raw_input()<br>
+2.input()</p>
+
+<p><strong>1. raw_input()</strong></p>
+
+<p>raw_input() asks the user for a string of data (ended with a newline), and simply returns the string. It can also take an argument, which is displayed as a prompt before the user enters the data.</p>
+
+<p>Example:<br>
+print (raw_input('Enter input'))<br>
+prints out&nbsp;&nbsp; &nbsp;Enter input&nbsp; &lt;user input data here&gt;</p>
+
+<p>In order to assign the string data to a variable string1 you would type<br>
+string1=raw_input('Enter input')</p>
+
+<p>After user inputs data e.g.hello. The value of string1 is hello</p>
+
+<p><strong>2. input()</strong></p>
+
+<p>input() uses raw_input to read a string of data, and then attempts to evaluate it as if it were a Python program, and then returns the value that results.</p>
+
+<p>So entering 10 takes as an integer.But for raw_input() it is a string.</p>
+
+<p>lambda expression:<br>
+Used to provide complex expressions to the input<br>
+lambda x:x+x,range(10)</p>
+
+<p>Here expression converts x into x+x for all values in the range.</p>
+
+<p>To provide complex expressions the input from user can be<br>
+map(lambda x: x*x, range(10))</p>
+
+<p>Note: No inputted statement can span more than one line.</p>
+
+<p>The difference between input() and raw_input() is shown in the example,</p>
+
+<p>#!/usr/bin/python<br>
+x=raw_input('enter value')<br>
+print type(x)<br>
+Now,<br>
+if input x is 20 then the type(x) is a string.</p>
+
+<p>#!/usr/bin/python<br>
+x=input('enter value')<br>
+print type(x)<br>
+Now,<br>
+if input x is 20 then the type(x) is an integer</p>
+
+<p>Lets go through another example:</p>
+
+<p><strong>#For raw_input:</strong></p>
+
+<p>&nbsp;#!/usr/bin/python<br>
+str = raw_input("Enter your input: ");<br>
+print "Received input is : ", str</p>
+
+<p><strong>Execution:</strong><br>
+Enter your input: Hello Python<br>
+Received input is :&nbsp; Hello Python</p>
+
+<p><strong>#For input:</strong></p>
+
+<p>&nbsp;#!/usr/bin/python<br>
+str = input("Enter your input: ");&nbsp; #complex program can be given as input.The input() function evaluates it.<br>
+print "Received input is : ", str</p>
+
+<p><strong>Execution:</strong><br>
+Enter your input: [x*5 for x in range(2,10,2)]<br>
+Recieved input is :&nbsp; [10, 20, 30, 40]</p>
+
+                  <div class="pull-right">
+                    <a href="/python/output_operations" title="Output Operations"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Output Operations</div> </a>
+                    <a href="/python/output_operations" title="Output Operations"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

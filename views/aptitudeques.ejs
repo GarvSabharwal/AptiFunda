@@ -1,0 +1,139 @@
+﻿<% include adminheader %>
+
+
+<main style="padding-top:85px;" ng-app="">
+        <!--Main layout-->
+		
+        <div class="container">
+
+            <!--Page heading-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">ADD QUESTIONS & SOLUTIONS</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/selecttopic">Select Topic</a></li>
+						<li class="breadcrumb-item active">Questions with Solution</li>
+					</ol>
+				
+                </div>
+            </div>
+            <!--/.BreadCrumb with Title-->
+            <div class="row" >
+                <!--First column-->
+                <div class="col-md-9 unit-section">
+              <form class="form-horizontal" role="form" method="post" action="/aptitudeques" >
+					
+					<div class="row form-group">
+                                                
+                        <label for="status" class="control-label">Status Of Submission</label>
+								<h3>
+								<%=status%>
+								</h3>                    
+                      
+                    </div>
+						
+                    <div class="row form-group" >
+                                                
+                       <div class="col-sm-6">
+                        <label for="question " class="control-label">Question</label>
+						<input type="text" class="form-control" id="question" name="question" placeholder="Enter Question">
+						</div>
+						<div class="col-sm-6">
+                        
+                        <label for="question " class="control-label">Question Image Name If any</label>
+						<input type="text" class="form-control" id="questioni" name="questioni" placeholder="Enter Question Image Name">
+						</div>
+                    </div>
+					
+                    
+					<div class="row form-group" >
+                        
+						<div class="col-sm-6">
+						<label for="option1" class="control-label">Option 1</label>                        
+                        <input type="text" class="form-control" id="optiona" name="optiona" placeholder="Enter Option 1">
+						</div>
+
+						<div class="col-sm-6">
+						<label for="option1" class="control-label">Option 1 Image Name</label>                        
+                        <input type="text" class="form-control" id="optionai" name="optionai" placeholder="Enter Option 1 Image Name">
+						</div>
+						   
+                    </div>
+
+					<div class="row form-group " >
+						<div class="col-sm-6">
+						
+                        <label for="option2" class="control-label">Option 2</label>                        
+						<input type="text" class="form-control" id="optionb" name="optionb" placeholder="Enter Option 2">
+						</div>
+						<div class="col-sm-6">
+                        <label for="option2" class="control-label">Option 2 Image Name</label>                        
+						<input type="text" class="form-control" id="optionbi" name="optionbi" placeholder="Enter Option 2 Image Name">
+						</div>
+                    </div>
+					<div class="row form-group">
+                        <div class="col-sm-6">
+						<label for="option3" class="control-label">Option 3</label>                        
+                        <input type="text" class="form-control" id="optionc" name="optionc" placeholder="Enter Option 3">
+						</div>
+						<div class="col-sm-6">
+						<label for="option3" class="control-label">Option 3 Image Name</label>                        
+                        <input type="text" class="form-control" id="optionci" name="optionci" placeholder="Enter Option 3 Image Name">
+						</div>   
+                    </div>
+					<div class="row  form-group">
+                        <div class="col-sm-6">
+						<label for="option4" class="control-label">Option 4</label>                        
+						<input type="text" class="form-control" id="optiond" name="optiond" placeholder="Enter Option 4">
+                        </div>
+						<div class="col-sm-6">
+						<label for="option4" class="control-label">Option 4 Image Name</label>                        
+						<input type="text" class="form-control" id="optiondi" name="optiondi" placeholder="Enter Option 4 Image Name">
+                        </div>
+                    </div>
+					
+					<div class="row  form-group">
+                        
+						<div class="col-sm-6">
+						<label for="answer" class="control-label">Answer</label>                        
+						<input type="text" class="form-control" id="answer" name="answer" placeholder="Enter Answer">
+						</div>
+
+						<div class="col-sm-6">
+						<label for="technique" class="control-label">Shortcut Technique Image Name</label>                        
+						<input type="text" class="form-control" id="technique" name="technique" placeholder="Enter Technique Image Name">
+						</div>
+					</div>
+
+		
+                        
+                   
+                    
+					<div class="row form-group">                        
+                      
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                       
+                    </div>
+					
+
+                </form>
+				</div>
+				<div class="col-md-3" >
+				</div>
+				
+	
+			</div>
+			
+			
+</div>
+</main>
+    
+
+	
+<script src="../bower_components/angular/angular.min.js"></script>
+    
+<% include footer %>

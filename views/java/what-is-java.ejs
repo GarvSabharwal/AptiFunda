@@ -1,0 +1,395 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python -->  5. Operators supported for Data manipulation and Comparison</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">5.1. Basic operators</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+
+
+
+ <p ><a style="color:#356BC3" href="/java/what-is-java" title="What is java"><strong>1.1. What is Java</strong></a></p>
+ <p><a href="/python/operator_precedence" title="Operator precedence">5.2. Operator precedence</a></p>
+                        <p><a href="/python/pp_4" title="Practise Problems">5.3. Practise Problems</a></p>
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">1.1. What is Java </small>
+                    </h3>
+				<hr>                  
+				<p>Java is a programming language created by James Gosling from Sun Microsystems (Sun) in 1991. The first publicly available version of Java (Java 1.0) was released in 1995.</p>
+
+<p>Sun Microsystems was acquired by the Oracle Corporation in 2010. Now oracle is owning Java.</p>
+
+<p>Java is Simple:There are various features that makes the java as a simple language. because Java is easy to learn and developed by taking the best features from other languages mainly like C and C++.</p>
+
+<p>Java is Platform Independent-Java provides the facility to "Write once -Run any where"(Known as platform independent).</p>
+
+<p>Java is Robust-Java has the strong memory allocation and automatic garbage collection mechanism. It carries out type checking at both compile and runtime making sure that every data structure has been clearly defined and typed. compiler checks the program for any error and interpreter checks any run time error that every data structure is clearly defined and typed. Java manages the memory automatically by using an automatic garbage collector. all the above features makes Java language robust.</p>
+
+<p><strong>Why Java is important to internet</strong></p>
+
+<p>In a network, two very broad categories of objects are transmitted between the server and your personal computer: passive information and dynamic, active programs. For example, when you read your e-mail, you are viewing passive data. Even when you download a program, the program’s code is still only passive data. Even when you download a second type of object can be transmitted to your computer: a dynamic, self-executing program. Such a program is and the server yet initiates active agent on the client computer. For example, the server to display properly the data that the server is sending might provide a program.</p>
+
+<p>As desirable as dynamic, networked programs are, they also present serious problems in the areas of security and portability</p>
+
+<p>Let us begin by writing our first Java program that prints a message "Hello, world!" to the display console, as follows:</p>
+
+<p><strong>1. Hello World program in java</strong></p>
+
+<p><strong>Step 1: Write the Source Code:</strong> Enter the following source codes using a programming text editor (such as TextPad or NotePad++ for Windows or gedit for UNIX/Linux/Mac) or an Interactive Development Environment (IDE) (such as Eclipse or NetBeans - Read the respective "How-To" article on how to install and get started with these IDEs – to see more about IDE refer the Glossary).</p>
+
+<p>Save the source file as "Hello.java". A Java source file should be saved with a file extension of ".java". The filename shall be the same as the classname - in this case "Hello".</p>
+
+<p>// Write simple Hello Program in Java</p>
+
+<p>&nbsp;&nbsp; &nbsp; class HelloWorld &nbsp;//Start<br>
+&nbsp;&nbsp; &nbsp;{<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;public static void main(String args[])<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{</p>
+
+<p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;System.out.println("Hello World program in java");<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}// Main methods ends<br>
+&nbsp;&nbsp; &nbsp;}// Java class ends<br>
+&nbsp;&nbsp; &nbsp;</p>
+
+<p><strong>Step 2: Compile the Source Code:</strong> Compile the source code "Hello.java" into portable bytecode "HelloWorld.class" using JDK compiler "javac". Start a CMD Shell (Windows) or Terminal (UNIX/Linux/Mac) and issue this command:</p>
+
+<p>before run java file you should set the path and classpath</p>
+
+<p>path: to instruct compiler that where your JDK is installed</p>
+
+<p>How to set the path:</p>
+
+<p>set PATH=.;C:\Program Files\Java\jdk1.5.0\bin(for example:<br>
+C:\Program Files\Java\jdk1.5.0\bin (Provided your jdk installed in the given path)</p>
+
+<p>See the below screen shots in order to run any java program in command prompt mode</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_pic1.JPG" style="height:336px; line-height:20.7999992370605px; text-align:center; width:576px"></p>
+
+<p><strong>Summary:</strong></p>
+
+<ul>
+	<li>Java is platform Independent and Portable.</li>
+	<li>Java is Robust and secured.</li>
+	<li>Java is pure object oriented language.</li>
+	<li>Java does compilation as well Interpretation.</li>
+	<li>Java latest version of JDK 7(Current version is being used in Industry)</li>
+	<li>JDK and JRE has to be installed in order to Java program.</li>
+</ul>
+
+<p><strong>History of Java&nbsp;</strong></p>
+
+<p>Java is released in 1995 as a core component of Sun Micro system's Java platform. In year 1991 they make a platform independent software called it Oak. and in early 1995 Java 1.0 is officially released. This is the first version of Java as JDK1.0. After the first version, many classes, packages are added in Java in future and new version's are released .</p>
+
+<p><strong>Java version releases &nbsp;&nbsp;</strong></p>
+
+<p>Current version of Java is Java SE7. The Key features in Java SE 7:</p>
+
+<ul>
+	<li>Strings in switch Statement</li>
+	<li>Type Inference for Generic Instance Creation</li>
+	<li>Multiple Exception Handling</li>
+	<li>Support for Dynamic Languages</li>
+	<li>Try with Resources</li>
+	<li>Java nio Package</li>
+	<li>Binary Literals, underscore in literals</li>
+	<li>Diamond Syntax</li>
+	<li>Automatic Null Handling</li>
+</ul>
+
+<p>Differ Version Available prior to Current Version (Java SE7)</p>
+
+<table border="" cellpadding="0" cellspacing="0" style="line-height:20.7999992370605px">
+	<tbody>
+		<tr>
+			<td style="width:192px">
+			<p>&nbsp;Version</p>
+			</td>
+			<td style="width:192px">
+			<p>Year of Release</p>
+			</td>
+			<td style="width:195px">
+			<p>&nbsp;Description</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p>J2SE 1.4</p>
+			</td>
+			<td style="width:192px">
+			<p>6-Feb-2002</p>
+			</td>
+			<td style="width:195px">
+			<p>This was the first release of the java platform developed under java community process as JSR 59. The Major Changes are- assert Keyword, Regular Expression, Exception chaining, Image I/O API for reading and writing images, Java Web start included.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p>J2SE 5.0</p>
+			</td>
+			<td style="width:192px">
+			<p>30-Sept-2004</p>
+			</td>
+			<td style="width:195px">
+			<p>New&nbsp; features added are- Generics, Metadata, Autoboxing, Enumeratations, Swing, Var args, collections static imports etc.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p>Java SE 6</p>
+			</td>
+			<td style="width:192px">
+			<p>11-Dec-2006</p>
+			</td>
+			<td style="width:195px">
+			<p>New changes are- Scripting Language support, Improved web service support trough JAX-WS , JDBC 4.0 support, support for pluggable annotations, JVM improvements including Synchronization and compiler performance optimizations, Garbaze collection algorithms</p>
+
+			<div>&nbsp;</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Java Platform</strong></p>
+
+<ul>
+	<li>JRE and JDK : See the JDK Section in detail</li>
+	<li>Java Programming Language:</li>
+	<li>Java Virtual Machines – See the JVM Section in detail</li>
+	<li>Base Libraries</li>
+	<li>Integration Libraries</li>
+	<li>User Interface Libraries</li>
+	<li>Deployment</li>
+	<li>Java Deployment</li>
+	<li>Tool Specifications</li>
+	<li>JDK Tools &amp; Utilities</li>
+	<li>Platforms</li>
+</ul>
+
+<p><strong>JVM- Java Virtual Machine</strong></p>
+
+<p>A Java virtual machine (JVM), an implementation of the Java Virtual Machine Specification, interprets compiled Java binary code (called bytecode) for a computer's processor(or "hardware platform") so that it can perform a Java program's instructions. Java was designed to allow application programs to be built that could be run on any platform without having to be rewritten or recompiled by the programmer for each separate platform. A Java virtual machine makes this possible because it is aware of the specific instruction lengths and other particularities of the platform.</p>
+
+<p><strong>JVM is:</strong></p>
+
+<p>A specification where working of Java Virtual Machine is specified. But implementation provider is independent to choose the algorithm. Its implementation has been provided by Sun and other companies.</p>
+
+<p>An implementation Its implementation is known as JRE (Java Runtime Environment).</p>
+
+<p>Runtime Instance Whenever you write java command on the command prompt to run the java class, and instance of JVM is created.</p>
+
+<ul>
+	<li>The JVM performs following operation:</li>
+	<li>Loads code</li>
+	<li>Verifies code</li>
+	<li>Executes code</li>
+	<li>Provides runtime environment.</li>
+</ul>
+
+<p>The below diagram will explain in details how JVM converts java file into class and byte code.</p>
+
+<p><strong>JVM Architecture:</strong></p>
+
+<p><strong>JDK - Java Development Kit</strong></p>
+
+<p>A Java Development Kit (JDK) is a program development environment for writing Java applications. It consists of a run time environment that sits on top of the operating system layer and also the tools and programming that developers need to compile, debug, and run applications written in the Java language.&nbsp;</p>
+
+<p>The JDK (Java Development Kit) is used for developing java applications. The JDK includes JRE, set of API classes, Java compiler, Webstart and additional files needed to write Java applications. The JDK (Java Development Kit) contains software development tools which are used to compile and run the Java program. Both JDK and JRE contains the JVM.</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_14.jpg" style="height:455px; line-height:20.7999992370605px; text-align:center; width:402px"></p>
+
+<p><strong>JRE- Java Runtime Environment</strong></p>
+
+<p>Java Runtime Environment (JRE), also known as Java Runtime, is part of the JDK. JRE provides the minimum requirements for executing a Java application; it consists of the Java Virtual Machine (JVM), core classes, and supporting files. Thus it covers most end-users needs and contains everything required to run Java applications on our system.</p>
+
+<p><strong>Java Environment Setup</strong></p>
+
+<p>Java installation and environment variable setup steps are clearly described in chapter 3b. Follow the instructions given in that chapter and set up the Java environment.&nbsp;</p>
+
+<p>Download JDK 5 or above setup for installation. Link to download latest version of java, jdk 7 is given below.<br>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html</a></p>
+
+<p>Set the environment variables CLASSPATH and JAVA_HOME after JDK installation.</p>
+
+<p><strong>Know more on Command Prompt</strong></p>
+
+<p><strong>1. What is Command Prompt?</strong></p>
+
+<p>Command Prompt is a feature of Windows that provides an entry point for typing MS-DOS (Microsoft Disk Operating System) commands and other computer commands. The most important thing to know is that by typing commands, you can perform tasks on your computer without using the Windows graphical interface.</p>
+
+<p>When you're using Command Prompt, the term command prompt also refers to the right angle bracket (&gt;, also known as the greater than character) that indicates the command line interface can accept commands. Other important information, such as the current working directory (or location) where the command will be run, can be included as part of the command prompt.&nbsp;</p>
+
+<p>For example, if you open the Command Prompt window and see the C:\&gt; command prompt with a blinking cursor to the right of the right angle bracket character (&gt;), you know that the command you enter will be run on the entire C drive of your computer.</p>
+
+<p><strong>2. How do I get to a command prompt?</strong></p>
+
+<p>Open the Command Prompt window by clicking the Start button Picture of the Start button, clicking All Programs, clicking Accessories, and then clicking Command Prompt.</p>
+
+<p><strong>Execute a Sample Java Program using Command Prompt</strong></p>
+
+<p>Steps to run a java program is described in chapter 3b. We will provide you a sample Java program for execution.</p>
+
+<p>Create a java file “TestClass.java” and put the sample code given below in it. We will study more on how to write a Java class later in this course. This is just to understand how to compile a Java program file and how to execute it using command prompt.&nbsp;</p>
+
+<p>class TestClass {<br>
+&nbsp; public static void main(String args[])<br>
+&nbsp; {<br>
+&nbsp; &nbsp; System.out.println("TestClass is running fine.");<br>
+&nbsp; }<br>
+}</p>
+
+<p>After execution of TestClass, you should get the message on the command prompt as "TestClass is running fine". Have you got the output on command prompt / console.</p>
+
+<p><strong>Download &amp; Install JDK:</strong></p>
+
+<p>Oracle.com hosts the latest JDK installer and also the archives of older versions of JDK installer. The latest installer could be downloaded from the link:</p>
+
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_1.jpg" style="height:68px; line-height:20.7999992370605px; text-align:center; width:507px"></p>
+
+<p>If you need a previous version of Java visit the following link:</p>
+
+<p><a href="http://www.oracle.com/technetwork/java/javase/archive-139210.html" target="_blank">http://www.oracle.com/technetwork/java/javase/archive-139210.html</a></p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_2.jpg" style="height:64px; line-height:20.7999992370605px; text-align:center; width:489px"></p>
+
+<p>After the download is complete, double click the installer and follow the installation process. Follow the recommended settings during installation.&nbsp;</p>
+
+<p>Depending on the location that was chosen to install the JDK, you would see the following contents.</p>
+
+<p>The outer most folder that has all the installed contents is generally referred to as Java Home.</p>
+
+<p>So, as the per the below installation, the Java Home directory is C:\jdk1.5.0</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_3.jpg" style="height:349px; line-height:20.7999992370605px; text-align:center; width:348px"></p>
+
+<p>The developer frequently needs an access to the java compiler (javac) and java interpreter (java). These tools come along with JDK and you will find them under the bin folder in Java installation folder.</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_4.jpg" style="height:337px; line-height:20.7999992370605px; text-align:center; width:192px"></p>
+
+<p>To enable to developer to use these tools from any directory in the command prompt, we set these values in the operating system environment variable.</p>
+
+<p><strong>Configure JDK:</strong></p>
+
+<p>Environment variables are key and value pair. PATH is one of the environment variable (key). It's value is a collection of more than 1 directory path. Operating system uses the PATH variable to scan all the directory when a user want to execute a tool without mentioning the installation path.</p>
+
+<p>eg. PATH = C:\jdk1.5.0\bin; C:\Program Files\Intel\iCLS Client\; C:\Program Files\IBM\Trace Facility\</p>
+
+<p>As you can see, the delimeter (;) is used to separate multiple directory mentioned as a value to the PATH environment variable.</p>
+
+<p>To set and environment variable, right click on Computer icon, and select Properties.&nbsp;</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_5.jpg" style="height:223px; line-height:20.7999992370605px; text-align:center; width:487px"></p>
+
+<p>It will open Control Panel Home as shown below:</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_6.jpg" style="height:198px; line-height:20.7999992370605px; text-align:center; width:442px"></p>
+
+<p>Right click on the Advanced system setting, it will open System Properties as shown below.</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_7.jpg" style="height:403px; line-height:20.7999992370605px; text-align:center; width:386px"></p>
+
+<p>Go to the Advanced tab, and click on the Environment Variables button available at the bottom. This is would open a small window that will list all the existing environment variables. It has 3 button – New (to add a new environment variable), Edit (to edit the value of existing environment variable) and Delete (to delete and existing environment variable)</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_8.jpg" style="height:204px; line-height:20.7999992370605px; text-align:center; width:371px"></p>
+
+<p><br>
+Click on the button – New. It will open a new window with 2 empty text boxes. Enter the variable name as PATH. In variable value, enter the path to the bin folder in java installation directory.</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_9.jpg" style="height:148px; line-height:20.7999992370605px; text-align:center; width:350px"></p>
+
+<p>Click on OK to save changes.</p>
+
+<p>You can verify the installation, by the command: java -version&nbsp;</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_10.jpg" style="height:94px; line-height:20.7999992370605px; text-align:center; width:271px"></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Create a folder javaproject in your D: drive. Create a file MyFirstJavaProgram.java with following contents.</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_11.jpg" style="height:146px; line-height:20.7999992370605px; text-align:center; width:356px"></p>
+
+<p>Open command prompt and browse to your folder D:\javaproject&nbsp;</p>
+
+<p>Compile the file MyFirstJavaProgram.java with the help of the compiler – javac. The sytanx to compile a file with java extension is – javac FileName.java</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_12.jpg" style="height:77px; line-height:20.7999992370605px; text-align:center; width:385px"></p>
+
+<p><br>
+If the compilation is successful, a file MyFirstJavaProgram.class is generated. The generated class file can be run with help of an interpreter – java. The syntax to execute a class file is – java FileName</p>
+
+<p style="text-align:center"><img alt="" src="./What is Java_files/content_content_13.jpg" style="height:69px; line-height:20.7999992370605px; text-align:center; width:336px"></p>
+
+<p><br>
+Congratulations !! You have executed your first java program.</p>
+
+
+
+               
+               <div class="pull-right">
+                    <a href="/java/java-variables-and-operators" title="operator presedence"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/java/java-variables-and-operators" title="operator presedence"><div class="btn btn-default btn- pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

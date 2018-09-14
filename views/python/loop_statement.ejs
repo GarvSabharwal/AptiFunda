@@ -1,0 +1,262 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> 7. How to execute a block of statements repetitively – Loop Structures</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">7.1. Loop statement</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/loop_statement" style="color:#356BC3;" title="Loop statement">7.1. Loop statement</a>
+                </p>
+                <p>
+                  <a href="/python/loop_control_statements" title="Loop control statements">7.2. Loop control statements</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_1" title="Problem statement">7.3. Problem statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_6" title="Practise Problems">7.4. Practise Problems</a>
+                </p>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 7.1. Loop statement </small> </h3>
+            <hr>
+                  <p>There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</p>
+
+<p>Programming languages provide various control structures that allow for more complicated execution paths.</p>
+
+<p>A loop statement allows us to execute a statement or group of statements multiple times and following is the general form of a loop statement in most of the programming languages:</p>
+
+<p style="text-align: center;"><img alt="" src="./7.1Loop statement_files/content_3.jpg" style="height:301px; width:262px"></p>
+
+<p>Python programming language provides following types of loops to handle looping requirements:<br>
+&nbsp;1. &nbsp;&nbsp; &nbsp;While loop<br>
+&nbsp;2. &nbsp;&nbsp; &nbsp;for loop<br>
+&nbsp;3. &nbsp;&nbsp; &nbsp;Loop control statements</p>
+
+<p><strong>1. while loop</strong></p>
+
+<p>A while loop statement in Python programming language repeatedly executes a target statement as long as a given condition is true. Unlike the for loop, there is no built-in end counter. It is up to the programmer to make sure that the given condition stops being True at some point, or else the loop will become an infinite loop.</p>
+
+<p>Syntax:<br>
+The syntax of a while loop in Python programming language is:<br>
+while expression:<br>
+&nbsp;&nbsp; statement(s)<br>
+&nbsp;<br>
+Here, statement(s) may be a single statement or a block of statements. The condition may be any expression, and true is any non-zero value. The loop iterates while the condition is true.</p>
+
+<p>When the condition becomes false, program control passes to the line immediately following the loop.</p>
+
+<p>In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.</p>
+
+<p>Flow Diagram:</p>
+
+<p style="text-align: center;"><img alt="" src="./7.1Loop statement_files/content_4.jpg" style="height:372px; width:242px"></p>
+
+<p>Here, key point of the while loop is that the loop might not ever run. When the condition is tested and the result is false, the loop body will be skipped and the first statement after the while loop will be executed.</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+a = 0<br>
+while a &lt; 5:<br>
+&nbsp;&nbsp;&nbsp; a += 1 # Same as a = a + 1<br>
+&nbsp;&nbsp;&nbsp; print (a)<br>
+And here is the output:<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+
+<p><strong>2. for loop</strong><br>
+The for loop in Python has the ability to iterate over the items of any sequence, such as a list or a string.</p>
+
+<p>Syntax:</p>
+
+<p>The syntax of a for loop look is as follows:</p>
+
+<p>for iterating_var in sequence:<br>
+&nbsp;&nbsp; statements(s)</p>
+
+<p>If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable iterating_var. Next, the statements block is executed. Each item in the list is assigned to iterating_var, and the statement(s) block is executed until the entire sequence is exhausted.</p>
+
+<p><strong>Flow Diagram:</strong></p>
+
+<p style="text-align: center;"><strong><img alt="" src="./7.1Loop statement_files/content_5.jpg" style="height:314px; width:347px"></strong></p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+list = [2,4,6,8]<br>
+sum = 0<br>
+for num in list:<br>
+&nbsp;&nbsp;&nbsp; sum = sum + num<br>
+print ("The sum is: %d" % sum)</p>
+
+<p>with the output simply being:</p>
+
+<p>The sum is:&nbsp; 20<br>
+For / Range Loops:</p>
+
+<p>The range() function creates an arithmetic progression as a list. The for loop can use range to loop from a beginning integer to an ending integer. The default increment or step value is 1, but you can set this to any positive or negative integer. Here is the syntax:</p>
+
+<p>range([start,]stop[,step])</p>
+
+<p><strong>Example:</strong><br>
+Here is some code to print out the first 9 numbers of the Fibonacci series:<br>
+#!/usr/bin/python<br>
+a = 1<br>
+b = 1<br>
+for c in range(1,10):<br>
+&nbsp;&nbsp;&nbsp; print (a)<br>
+&nbsp;&nbsp;&nbsp; n = a + b<br>
+&nbsp;&nbsp;&nbsp; a = b<br>
+&nbsp;&nbsp;&nbsp; b = n<br>
+print ("")</p>
+
+<p>with the surprising output :<br>
+1<br>
+1<br>
+2<br>
+3<br>
+5<br>
+8<br>
+13<br>
+21<br>
+34</p>
+
+<p>Everything that can be done with for loops can also be done with while loops but for loops give an easy way to go through all the elements in a list or to do something a certain number of times.</p>
+
+<p><strong>Else statement used with loops</strong></p>
+
+<p>Python supports to have an else statement associated with a loop statement.</p>
+
+<p>If the else statement is used with a for loop, the else statement is executed when the loop has exhausted iterating the list.<br>
+If the else statement is used with a while loop, the else statement is executed when the condition becomes false.</p>
+
+<p><strong>Example1:</strong> else with for loop<br>
+The following example illustrates the combination of an else statement with a for statement that searches for prime numbers from 10 through 20.<br>
+#!/usr/bin/python<br>
+for num in range(10,20):&nbsp;&nbsp; #to iterate between 10 to 20<br>
+&nbsp;&nbsp; for i in range(2,num):&nbsp; #to iterate on the factors of the number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if num%i == 0:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #to determine the first factor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; j=num/i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #to calculate the second factor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print '%d equals %d * %d' % (num,i,j)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break #to move to the next number, the #first FOR<br>
+&nbsp;&nbsp; else:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # else part of the loop<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print num, 'is a prime number'</p>
+
+<p><br>
+When the above code is executed, it produces the following result:<br>
+10 equals 2 * 5<br>
+11 is a prime number<br>
+12 equals 2 * 6<br>
+13 is a prime number<br>
+14 equals 2 * 7<br>
+15 equals 3 * 5<br>
+16 equals 2 * 8<br>
+17 is a prime number<br>
+18 equals 2 * 9<br>
+19 is a prime number</p>
+
+<p><strong>Example2:</strong> else with while loop<br>
+The following example illustrates the combination of an else statement with a while statement that prints a number as long as it is less than 5, otherwise else statement gets executed.<br>
+#!/usr/bin/python<br>
+count = 0<br>
+while count &lt; 5:<br>
+&nbsp;&nbsp; print count, " is&nbsp; less than 5"<br>
+&nbsp;&nbsp; count = count + 1<br>
+else:<br>
+&nbsp;&nbsp; print count, " is not less than 5"</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+0 is less than 5<br>
+1 is less than 5<br>
+2 is less than 5<br>
+3 is less than 5<br>
+4 is less than 5<br>
+5 is not less than 5</p>
+
+<p>&nbsp;</p>
+
+                  <div class="pull-right">
+                    <a href="/python/loop_control_statements" title="Loop control statements"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Loop control statements</div> </a>
+                    <a href="/python/loop_control_statements" title="Loop control statements"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

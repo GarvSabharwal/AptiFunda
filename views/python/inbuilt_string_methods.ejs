@@ -1,0 +1,407 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Operations on String Variables</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Inbuilt String Methods</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p >
+                  <a href="/python/inbuilt_string_methods" style="color:#356BC3;" title="Inbuilt String Methods">8.1. Inbuilt String Methods</a>
+                </p>
+                <p>
+                  <a href="/python/string_formatting_operations" title="String Formatting Operations">8.2. String Formatting Operations</a>
+                </p>
+                <p>
+                  <a href="/python/problem_statement_2" title="Problem statement">8.3. Problem Statement</a>
+                </p>
+                <p>
+                  <a href="/python/pp_7" title="Practise Problems">8.4. Practise Problems</a>
+                </p>
+
+
+                
+                
+                
+                
+                
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 8.1. Inbuilt String Methods </small> </h3>
+            <hr>
+                  <p>Python's built-in string methods are incredibly powerful. As the name implies, each of the following methods are available through class string. Every string object is an instance of that class and has these methods available.</p>
+
+<p><strong>1. str.capitalize()</strong></p>
+
+<p>Returns a copy of the string with its first character capitalized and the rest lowercased.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+a="string"<br>
+print a.capitalize()</p>
+
+<p><strong>Output:</strong><br>
+String</p>
+
+<p><strong>2. str.upper()</strong></p>
+
+<p>Returns a copy of string with all capital letters.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+a="string"<br>
+print a.upper()</p>
+
+<p><strong>Output:</strong><br>
+STRING</p>
+
+<p><strong>3. str.lower()</strong></p>
+
+<p>Returns a copy of string with all small letters.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+a="String"<br>
+print a.lower()</p>
+
+<p><strong>Output:</strong><br>
+string</p>
+
+<p><strong>4. str.count(sub[, start[, end]])</strong></p>
+
+<p>Returns the number of non-overlapping occurrences of substring sub in the range [start, end]. Optional arguments start and end are interpreted as in string slice notation.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+a="String string String string String"<br>
+print a.count("String")</p>
+
+<p><strong>Output:</strong><br>
+3</p>
+
+<p><strong>5. str.index(sub[, start[, end]])</strong></p>
+
+<p>Returns the lowest index in the string where substring sub is found, such that sub is contained in the slice s[start:end].Optional arguments start and end are interpreted as in slice notation.</p>
+
+<p><strong>Example:</strong></p>
+
+<p>#!/usr/bin/python<br>
+a="String string String string String"<br>
+print (a.index("String",3))</p>
+
+<p><strong>Output:</strong><br>
+14</p>
+
+<p><strong>6. str.endswith(suffix[, start[, end]])</strong></p>
+
+<p>Returns True if the string ends with the specified suffix, otherwise return False.<br>
+suffix can also be a tuple of suffixes to look for.With optional start, test beginning at that position. With optional end, stop comparing at that position.</p>
+
+<p><strong>Example 1:</strong><br>
+#!/usr/bin/python<br>
+a="String string String string String"<br>
+print (a.endswith("String"))</p>
+
+<p><strong>Output:</strong><br>
+True</p>
+
+<p><strong>Example 2:</strong><br>
+#!/usr/bin/python<br>
+a="String string String string String"<br>
+print (a.endswith("String",0,27))</p>
+
+<p><strong>Output:</strong><br>
+False</p>
+
+<p><strong>7. str.expandtabs([tabsize])</strong></p>
+
+<p>Returns a copy of the string where all tab characters are replaced by one or more spaces, depending on the current column and the given tab size. Tab positions occur every tabsize characters (default is 8, giving tab positions at columns 0, 8, 16 and so on). To expand the string, the current column is set to zero and the string is examined character by character. If the character is a tab (\t), one or more space characters are inserted in the result until the current column is equal to the next tab position. (The tab character itself is not copied.) If the character is a newline (\n) or return (\r), it is copied and the current column is reset to zero.Any other character is copied unchanged and the current column is incremented by one regardless of how the character is represented when printed.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="String\tstring\tString\tstring\tString"<br>
+print (“1. ”+a)<br>
+print (“2. ”+a.expandtabs(1))</p>
+
+<p><strong>Output:</strong><br>
+1. String&nbsp;&nbsp; &nbsp;string&nbsp;&nbsp; &nbsp;String&nbsp;&nbsp; &nbsp;string&nbsp;&nbsp; &nbsp;String<br>
+2. String string String string String</p>
+
+<p><strong>8. str.find(sub[, start[, end]])</strong></p>
+
+<p>Returns the lowest index in the string where substring sub is found, such that sub is contained in the slice s[start:end]. Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="String string String string String"<br>
+print (a.find("string"))</p>
+
+<p><strong>Output:</strong><br>
+7</p>
+
+<p><strong>9. str.isalnum()</strong><br>
+Returns true if all characters in the string are alphanumeric and there is at least one character, false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="String string String string String3"<br>
+b="StringstringStringstringString3"<br>
+print (a.isalnum())<br>
+print (b.isalnum())</p>
+
+<p><strong>Output:</strong><br>
+False<br>
+True</p>
+
+<p><strong>10. str.isalpha()</strong><br>
+Returns true if all characters in the string are alphabetic and there is at least one character, false otherwise.</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+a="StringstringStringstringString3"<br>
+b="StringstringStringstringString"<br>
+print (a.isalpha())<br>
+print (b.isalpha())</p>
+
+<p>Output:<br>
+False<br>
+True</p>
+
+<p><strong>11. str.isdigit()</strong><br>
+Returns true if all characters in the string are digits and there is at least one character, false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="StringstringStringstringString3"<br>
+b="33434"<br>
+print (a.isdigit())<br>
+print (b.isdigit())</p>
+
+<p><strong>Output:</strong><br>
+False<br>
+True</p>
+
+<p><strong>12. str.title()</strong><br>
+Returns a titlecased version of the string where words start with an uppercase character and the remaining characters are lowercase.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string string string string string"<br>
+print (a.title())</p>
+
+<p><strong>Output:</strong><br>
+String String String String String</p>
+
+<p><strong>13. str.islower()</strong><br>
+Returns true if all cased characters in the string are lowercase and there is at least one cased character, false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String string string string"<br>
+print (a.islower())</p>
+
+<p><strong>Output:</strong><br>
+False</p>
+
+<p><strong>14. str.isspace()</strong><br>
+Returns true if there are only whitespace characters in the string and there is at least one character, false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+b="&nbsp; "<br>
+print (b.isspace())<br>
+<strong>Output:</strong><br>
+True</p>
+
+<p><strong>15. str.istitle()</strong><br>
+Returns true if the string is a titlecased string and there is at least one character, for example uppercase characters may only follow uncased characters and lowercase characters only cased ones. Return false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String string string string"<br>
+print (a.istitle())</p>
+
+<p><strong>Output:</strong><br>
+False</p>
+
+<p><strong>16. str.isupper()</strong><br>
+Returns true if all cased characters in the string are uppercase and there is at least one cased character, false otherwise.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String string string string"<br>
+print (a.isupper())</p>
+
+<p><strong>Output:</strong><br>
+False</p>
+
+<p><strong>17. str.partition(sep)</strong><br>
+Split the string at the first occurrence of sep, and return a 3-tuple containing the part before the separator, the separator itself, and the part after the separator. If the separator is not found, return a 3-tuple(will be discussed in further course)containing the string itself, followed by two empty strings.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String string string string"<br>
+print (a.partition(" "))</p>
+
+<p><strong>Output:</strong><br>
+('string', ' ', 'String string string string')</p>
+
+<p><strong>18. str.replace(old, new[, count])</strong><br>
+Returns a copy of the string with all occurrences of substring old replaced by new. If the optional argument count is given, only the first count occurrences are replaced.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String1 string2 string3 string"<br>
+print (a.replace("string","wing"))</p>
+
+<p><strong>Output:</strong><br>
+wing String1 wing2 wing3 wing</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String1 string2 string3 string"<br>
+print (a.replace("string","wing",1))</p>
+
+<p><strong>Output:</strong><br>
+wing String1 string2 string3 string</p>
+
+<p><strong>19. str.strip([chars])</strong><br>
+Returns a copy of the string with the leading and trailing characters removed. The chars argument is a string specifying the set of characters to be removed. If omitted or None, the chars argument defaults to removing white space.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="&nbsp; strip&nbsp;&nbsp; "<br>
+print (a.strip())</p>
+
+<p><strong>Output:</strong><br>
+strip</p>
+
+<p><strong>20. str.split([sep[, maxsplit]])</strong><br>
+Returns a list of the words in the string, using sep as the delimiter string. If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements). If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).</p>
+
+<p>If sep is given, consecutive delimiters are not grouped together and are deemed to delimit empty strings (for example, '1,,2'.split(',') returns ['1', '', '2']). The sep argument may consist of multiple characters (for example, '1&lt;&gt;2&lt;&gt;3'.split('&lt;&gt;') returns ['1', '2', '3']). Splitting an empty string with a specified separator returns [''].</p>
+
+<p>If sep is not specified or is None, a different splitting algorithm is applied: runs of consecutive whitespace are regarded as a single separator, and the result will contain no empty strings at the start or end if the string has leading or trailing whitespace. Consequently, splitting an empty string or a string consisting of just whitespace with a None separator returns [].</p>
+
+<p>For example, ' 1&nbsp; 2&nbsp;&nbsp; 3&nbsp; '.split() returns ['1', '2', '3'], and '&nbsp; 1&nbsp; 2&nbsp;&nbsp; 3&nbsp; '.split(None, 1) returns ['1', '2&nbsp;&nbsp; 3&nbsp; '].</p>
+
+<p><strong>21. str.startswith(prefix[, start[, end]])</strong><br>
+Returns True if string starts with the prefix, otherwise return False. prefix can also be a tuple of prefixes to look for. With optional start, test string beginning at that position. With optional end, stop comparing string at that position.</p>
+
+<p><strong>Example 1:</strong><br>
+#!/usr/bin/python<br>
+a="String string String string String"<br>
+print (a.startswith("String"))</p>
+
+<p><strong>Output:</strong><br>
+True</p>
+
+<p><strong>22. str.swapcase()</strong><br>
+Returns a copy of the string with uppercase characters converted to lowercase and vice versa.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="string String string string"<br>
+print (a.swapcase())</p>
+
+<p><strong>Output:</strong><br>
+STRING sTRING STRING STRING</p>
+
+<p><strong>23. str.translate(table[, deletechars])</strong><br>
+Returns a copy of the string where all characters occurring in the optional argument deletechars are removed, and the remaining characters have been mapped through the given translation table, which must be a string of length 256.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+a="read this text"<br>
+print a.translate(None,'aeiou')</p>
+
+<p><strong>Output:</strong><br>
+rd ths txt</p>
+
+                  <div class="pull-right">
+                    <a href="/python/string_formatting_operations" title="String Formatting Operations"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">String Formatting Operations</div> </a>
+                    <a href="/python/string_formatting_operations" title="String Formatting Operations"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+            </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+<% include ../footer %>

@@ -1,0 +1,223 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+  <!--Main layout-->
+
+  <div class="container">
+
+    <!--Page heading-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="h3-responsive">
+          <small class="text-muted">Python --> Modularity and Code reusability – Functions</small>
+        </h3>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/python">Pyhton</a>
+          </li>
+          <li class="breadcrumb-item active">Function Arguments</li>
+        </ol>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-3 unit-section">
+        <!--Card-->
+        <div class="card  z-depth-2">
+
+          <!--Card Gradient-->
+          <div class="gradient" style="height:80px;padding-top:20px;">
+            Index
+
+            <div class="mask"></div>
+
+          </div>
+          <!--/.Card Gradient---->
+
+
+
+         
+          
+          
+          
+          
+          
+          
+
+          <!--Card content-->
+          <div class="card-block pad" >
+            <div class="row ">
+              <div class="col-md-12">
+                <p class="active">
+                  <a href="/python/functions_in_python" title="Functions in Python">10.1. Functions in Python</a>
+                </p>
+                <p>
+                  <a href="/python/pass_by_refrence" title="Pass by reference">10.2. Pass by reference</a>
+                </p>
+                <p>
+                  <a href="/python/function_arguments" style="color:#356BC3;" title="Function arguments">10.3. Function arguments</a>
+                </p>
+                <p>
+                  <a href="/python/return_statement_scope_variables" title="Return statement and Scope of Variables">10.4. Return statement and Scope of Variables</a>
+                </p>
+				<p>
+                  <a href="/python/problem_statement_4" title="Problem statement">10.5. Problem statement</a>
+                </p>
+				<p>
+                  <a href="/python/pp_9" title="Practise Problems">10.6. Practise Problems</a>
+                </p>
+				
+
+
+
+
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <div class="col-md-9" >
+        <div class="card  z-depth-2" >
+
+          <div style="margin:10px 0px 0px 10px;">
+
+            <h3 class="h3-responsive">
+              <small class="text-muted"> 10.3. Function arguments </small> </h3>
+            <hr>
+                  <p>You can call a function by using the following types of formal arguments:</p>
+
+<ul>
+	<li>&nbsp; Required arguments</li>
+	<li>&nbsp; Keyword arguments</li>
+	<li>&nbsp; Default arguments</li>
+	<li>&nbsp; Variable-length arguments</li>
+</ul>
+
+<p><strong>1. Required arguments: &nbsp;</strong><br>
+Required arguments are the arguments passed to a function in correct positional order. Here, the number of arguments in the function call should match exactly with the function definition.<br>
+To call the function printme(), you definitely need to pass one argument, otherwise it would give a syntax error as follows:</p>
+
+<p>def printme( str ):<br>
+&nbsp;&nbsp; "This prints a passed string into this function"<br>
+&nbsp;&nbsp; print str;<br>
+&nbsp;&nbsp; return;</p>
+
+<p>printme();</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+TypeError: printme() takes exactly 1 argument (0 given)</p>
+
+<p><strong>2. Keyword arguments:</strong><br>
+Keyword arguments are related to the function calls. When you use keyword arguments in a function call, the caller identifies the arguments by the parameter name.<br>
+This allows you to skip arguments or place them out of order because the Python interpreter is able to use the keywords provided to match the values with parameters. You can also make keyword calls to the printme() function in the following ways:</p>
+
+<p>#!/usr/bin/python<br>
+def printme( str ):<br>
+&nbsp;&nbsp; "This prints a passed string into this function"<br>
+&nbsp;&nbsp; print str;<br>
+&nbsp;&nbsp; return;</p>
+
+<p>printme( str = "My string");</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+My string</p>
+
+<p>Following example gives more clear picture. Note, here order of the parameter does not matter.<br>
+#!/usr/bin/python<br>
+def printinfo( name, age ):<br>
+&nbsp;&nbsp; "This prints a passed info into this function"<br>
+&nbsp;&nbsp; print "Name: ", name;<br>
+&nbsp;&nbsp; print "Age ", age;<br>
+&nbsp;&nbsp; return;</p>
+
+<p>printinfo( age=50, name="miki" );</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Name:&nbsp; miki<br>
+Age&nbsp; 50</p>
+
+<p><strong>3. Default arguments:</strong><br>
+A default argument is an argument that assumes a default value if a value is not provided in the function call for that argument. Following example gives an idea on default arguments, it would print default age if it is not passed.</p>
+
+<p>#!/usr/bin/python<br>
+def printinfo( name, age = 35 ):<br>
+&nbsp;&nbsp; "This prints a passed info into this function"<br>
+&nbsp;&nbsp; print "Name: ", name;<br>
+&nbsp;&nbsp; print "Age ", age;<br>
+&nbsp;&nbsp; return;</p>
+
+<p># Now you can call printinfo function<br>
+printinfo( age=50, name="miki" );<br>
+printinfo( name="miki" );</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Name:&nbsp; miki<br>
+Age&nbsp; 50<br>
+Name:&nbsp; miki<br>
+Age&nbsp; 35</p>
+
+<p><strong>4. Variable-length arguments:</strong><br>
+You may need to process a function for more arguments than you specified while defining the function. These arguments are called&nbsp;variable-length&nbsp;arguments and are not named in the function definition, unlike required and default arguments.</p>
+
+<p>The general syntax for a function with non-keyword variable arguments is this:</p>
+
+<p>def functionname([formal_args,] *var_args_tuple ):<br>
+&nbsp;&nbsp; "function_docstring"<br>
+&nbsp;&nbsp; function_suite<br>
+&nbsp;&nbsp; return [expression]</p>
+
+<p>An asterisk (*) is placed before the variable name that will hold the values of all non keyword variable arguments. This tuple remains empty if no additional arguments are specified during the function call.</p>
+
+<p>Following is a simple example:<br>
+#!/usr/bin/python<br>
+def printinfo( arg1, *vartuple ):<br>
+&nbsp;&nbsp; "This prints a variable passed arguments"<br>
+&nbsp;&nbsp; print "Output is: "<br>
+&nbsp;&nbsp; print arg1<br>
+&nbsp;&nbsp; for var in vartuple:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print var<br>
+&nbsp;&nbsp; return;</p>
+
+<p># Now you can call printinfo function<br>
+printinfo( 10 );<br>
+printinfo( 70, 60, 50 );</p>
+
+<p>When the above code is executed, it produces the following result:<br>
+Output is:<br>
+10<br>
+Output is:<br>
+70<br>
+60<br>
+50</p>
+
+                  <div class="pull-left">
+                    <a href="/python/pass_by_refrence" title="Pass by reference"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Pass by reference</div></span></a>
+                    <a href="/python/pass_by_refrence" title="Pass by reference"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/return_statement_scope_variables" title="Return statement and Scope of Variables"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Return statement and Scope of Variables</div> </a>
+                    <a href="/python/return_statement_scope_variables" title="Return statement and Scope of Variables"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+                </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>

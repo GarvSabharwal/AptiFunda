@@ -1,0 +1,209 @@
+﻿<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> 2. First Program In Python</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">2.1. Simple Program In Python</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+<div class="col-md-12">
+
+ <p><a style="color:#356BC3;" href="/python/first_program_in_python" title="Simple program in Python"><strong>2.1.Simple program in Python</strong></a></p>
+                        <p><a href="/python/pp_1" title="Practise Problems">2.2.Practise Problems</a></p>
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">2.1. Simple program in Python</small>
+                    </h3>
+				<hr>
+                  <p>Let us start with an example to understand basic program of python</p>
+
+<p>&nbsp;&nbsp; &nbsp;print('Hello, world')</p>
+
+<p>Here, print keyword is used to provide output on the screen.<br>
+&nbsp;&nbsp; &nbsp;The output is : Hello, world</p>
+
+<p>The above program can also be written as shown below<br>
+&nbsp;&nbsp; &nbsp;print 'Hello, world'</p>
+
+<p>The output of the above program is : Hello, world</p>
+
+<p>Note:&nbsp; 1. It is optional to use parenthesis with print statement. In both conditions output will be same. It is mandatory from python 3.x versions.<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.We can also end a statement with semicolon and it is optional again.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex:print 'Hello, world';</p>
+
+<p>The semicolon ( ; ) allows multiple statements on the single line<br>
+&nbsp;&nbsp;&nbsp; &nbsp;Ex: print 'hello';print 'world';<br>
+Here is a sample script of python,</p>
+
+<p><strong>Sample script:</strong></p>
+
+<p>#!/usr/bin/python<br>
+#Printing on to the terminal<br>
+print "Hi this is my first python script"</p>
+
+<p>To execute the sample script type python&lt;space&gt;filename.py</p>
+
+<p>Execution: python sample.py</p>
+
+<p><strong>Commenting in Python</strong></p>
+
+<p>Single line comment</p>
+
+<p>A hash sign (#) that is not inside a string literal begins a comment. All characters after the # and up to the physical line end are part of the comment and the Python interpreter ignores them.</p>
+
+<p><strong>Example:</strong><br>
+# Here you should write comments<br>
+print 'Hello, Python'&nbsp; &nbsp;<br>
+#This line is skipped by interpreter because it is after hash sign</p>
+
+<p><strong>Multi line comment</strong></p>
+
+<p>“““&nbsp; or&nbsp; ''' are used to write multi line comments if they are not inside a string literal.<br>
+Example 1:<br>
+'''<br>
+This is a multi line<br>
+comment<br>
+'''<br>
+print 'Hello, world'</p>
+
+<p>Example 2:<br>
+“““<br>
+This is a multi line<br>
+comment<br>
+“““<br>
+print 'Hello, world'</p>
+
+<p><strong>Quotations in python</strong></p>
+
+<p>Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.</p>
+
+<p>The triple quotes can be used to span the string across multiple lines.</p>
+
+<p>For example, all the following are legal<br>
+&nbsp;&nbsp; &nbsp;word = 'word'<br>
+&nbsp;&nbsp; &nbsp;sentence = "This is a sentence."<br>
+&nbsp;&nbsp; &nbsp;paragraph = """This is a paragraph. It is<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; made up of multiple lines and sentences."""(Single quotes can also be used in place of double quotes).<br>
+&nbsp;&nbsp; &nbsp;quote="'Hi'"&nbsp; #The string literal is 'Hi'</p>
+
+<p>We can also write the same literal as shown below:<br>
+&nbsp;&nbsp; &nbsp;quote='\'Hi\''</p>
+
+<p><strong>Note:</strong> Single and double quotes have no difference while using as a literal.</p>
+
+<p><strong>Line Indentation</strong></p>
+
+<p>One of the first cautions programmers encounter when learning Python is the fact that there are no braces to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is rigidly enforced.</p>
+
+<p>The number of spaces in the indentation is variable, but all statements within the block must be indented with same amount of spaces</p>
+
+<p><strong>Block 1:</strong><br>
+if True:<br>
+&nbsp;&nbsp;&nbsp; print "True"<br>
+else:<br>
+&nbsp;&nbsp;&nbsp; print "False"</p>
+
+<p>However, the second block in this example will generate an error:</p>
+
+<p><strong>Block 2:</strong><br>
+if True:<br>
+&nbsp;&nbsp;&nbsp; print "Answer"<br>
+&nbsp;&nbsp;&nbsp; print "True"<br>
+else:<br>
+&nbsp;&nbsp;&nbsp; print "Answer"<br>
+&nbsp; print "False"</p>
+
+<p>Thus, in Python all the continuous lines indented with similar number of spaces would form a block.</p>
+
+<p><strong>Note:</strong> Use 4 spaces for indentation as a good programming practice.</p>
+
+<p><strong>Multi-Line Statements</strong></p>
+
+<p>Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example:</p>
+
+<p>total = first_one + \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; second_two + \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; third_three</p>
+
+<p>Statements contained within the [], {} or () brackets do not need to use the line continuation character. For example:<br>
+days = ['Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday']&nbsp;&nbsp;&nbsp; &nbsp;</p>
+
+<p><strong>Problem statement</strong></p>
+
+<p>Write a program to get the following output?<br>
+&nbsp;$<br>
+$$$<br>
+&nbsp;$<br>
+&nbsp;<br>
+<strong>Solution</strong><br>
+The output would be as shown below,<br>
+print ' $'<br>
+print '$$$'<br>
+print ' $'</p>
+
+                    <div class="pull-right">
+                    <a href="/python/pp_1" title="Practise Problems"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="" title="Practise Problems"><div class="btn btn-primary btn-sm pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+

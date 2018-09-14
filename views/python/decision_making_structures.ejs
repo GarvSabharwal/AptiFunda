@@ -1,0 +1,280 @@
+<% include ../header %>
+<main style="padding-top:85px;">
+        <!--Main layout-->
+		
+        <div class="container">
+
+<!--Page heading-->
+            
+			<div class="row">
+                <div class="col-md-12">
+                    <h3 class="h3-responsive"> 
+                        <small class="text-muted">Python --> Controlling Program Flow - Conditional Statements</small>
+                    </h3>
+					
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+						<li class="breadcrumb-item active">6.1. Decision making structure</li>
+					</ol>
+				
+                </div>
+            </div>
+
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-3 unit-section">
+                    <!--Card-->
+                    <div class="card  z-depth-2">
+					
+					<!--Card Gradient-->
+                        <div class="gradient" style="height:80px;padding-top:20px;">
+									 Index
+                            
+                                <div class="mask"></div>
+                            
+                        </div>
+                        <!--/.Card Gradient---->
+
+                        <!--Card content-->
+<div class="card-block pad" >
+<div class="row ">
+
+<div class="col-md-12">
+ 
+ <p ><a href="/python/decision_making_structures" style="color:#356BC3;" title="Decision making structure"><strong>6.1. Decision making structure</strong></a></p>
+ <p><a href="/python/decision_making_structures" title="Practise Problems">6.2. Practise Problems</a></p>
+
+</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted"> 6.1. Decision making structure </small>
+                    </h3>
+				<hr>
+                  <p>Decision making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
+
+<p>Following is the general form of a typical decision making structure found in most of the programming languages:</p>
+
+<p style="text-align: center;"><amp-img alt="decision making structures" src="../../../img/python_images/6.1. Decision making structure/content_1.jpg" style="height:269px; width:209px"></amp-img></p>
+
+<p>Python programming language assumes any non-zero and non-null values as true, and if it is either zero or null, then it is assumed as false value.</p>
+
+<p>Python programming language provides following types of decision making statements.</p>
+
+<p><strong>1. If statement</strong><br>
+The if statement of Python is similar to that of other languages. The if statement contains a logical expression using which data is compared and a decision is made based on the result of the comparison.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<p>The syntax of an if statement in Python programming language is:<br>
+if expression:<br>
+&nbsp;&nbsp; statement(s)</p>
+
+<p>If the boolean expression evaluates to true, then the block of statement(s) inside the if statement will be executed. If boolean expression evaluates to false, then the first set of code after the end of the if statement(s) will be executed.<br>
+Python programming language assumes any non-zero and non-null values as true and if it is either zero or null, then it is assumed as false value.</p>
+
+<p><strong>Example:</strong><br>
+#!/usr/bin/python<br>
+var1 = 100<br>
+if var1:<br>
+&nbsp;&nbsp; print 1<br>
+&nbsp;&nbsp; print var1</p>
+
+<p>var2 = 0<br>
+if var2:<br>
+&nbsp;&nbsp; print 2<br>
+&nbsp;&nbsp; print var2<br>
+print "Good bye!"</p>
+
+<p>When the above code is executed, it produces the following result:</p>
+
+<p>1<br>
+100<br>
+Good bye!</p>
+
+<p><strong>2. If...else statement</strong><br>
+An else statement can be combined with an if statement. An else statement</p>
+
+<p style="text-align: center;"><amp-img alt="if else statement" src="../../../img/python_images/6.1. Decision making structure/content_2.jpg" style="height:312px; width:242px"></amp-img></p>
+
+<p>contains the block of code that executes if the conditional expression in the if statement resolves to 0 or a false value.<br>
+The else statement is an optional statement and there could be at most only one else statement following if. &nbsp;</p>
+
+<p>Syntax:</p>
+
+<p>The syntax of the if...else statement is:</p>
+
+<p>if expression:<br>
+&nbsp;&nbsp; statement(s)<br>
+else:<br>
+&nbsp;&nbsp; statement(s)</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+var1 = 100<br>
+if var1:<br>
+&nbsp;&nbsp; print "1 - Got a true expression value"<br>
+&nbsp;&nbsp; print var1<br>
+else:<br>
+&nbsp;&nbsp; print "1 - Got a false expression value"<br>
+&nbsp;&nbsp; print var1</p>
+
+<p>var2 = 0<br>
+if var2:<br>
+&nbsp;&nbsp; print "2 - Got a true expression value"<br>
+&nbsp;&nbsp; print var2<br>
+else:<br>
+&nbsp;&nbsp; print "2 - Got a false expression value"<br>
+&nbsp;&nbsp; print var2</p>
+
+<p>print "Good bye!"</p>
+
+<p>When the above code is executed, it produces the following result:</p>
+
+<p>1 - Got a true expression value<br>
+100<br>
+2 - Got a false expression value<br>
+0<br>
+Good bye!</p>
+
+<p><strong>3. If...elif...else statement</strong></p>
+
+<p>The elif statement allows you to check multiple expressions for truth value and execute a block of code as soon as one of the conditions evaluates to true.<br>
+Like the else, the elif statement is optional. However, unlike else, for which there can be at most one statement, there can be an arbitrary number of elif statements following an if.</p>
+
+<p>The syntax of the if...elif statement is:</p>
+
+<p>if expression1:<br>
+&nbsp;&nbsp; statement(s)<br>
+elif expression2:<br>
+&nbsp;&nbsp; statement(s)<br>
+elif expression3:<br>
+&nbsp;&nbsp; statement(s)<br>
+else:<br>
+&nbsp;&nbsp; statement(s)</p>
+
+<p>Note: Core Python does not provide switch or case statements as in other languages, but we can use if..elif...statements to simulate switch case as follows:</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+var = 100<br>
+if var == 200:<br>
+&nbsp;&nbsp; print "1 - Got a true expression value"<br>
+&nbsp;&nbsp; print var<br>
+elif var == 150:<br>
+&nbsp;&nbsp; print "2 - Got a true expression value"<br>
+&nbsp;&nbsp; print var<br>
+elif var == 100:<br>
+&nbsp;&nbsp; print "3 - Got a true expression value"<br>
+&nbsp;&nbsp; print var<br>
+else:<br>
+&nbsp;&nbsp; print "4 - Got a false expression value"<br>
+&nbsp;&nbsp; print var</p>
+
+<p>print "Good bye!"</p>
+
+<p>When the above code is executed, it produces the following result:</p>
+
+<p>3 - Got a true expression value<br>
+100<br>
+Good bye!</p>
+
+<p><strong>4. Nested if condition</strong><br>
+There may be a situation when you want to check for another condition after a condition resolves to true. In such a situation, you can use the nested if construct.<br>
+In a nested if construct, you can have an if...elif...else construct inside another if...elif...else construct.</p>
+
+<p>Syntax:</p>
+
+<p>The syntax of the nested if...elif...else construct may be:<br>
+if expression1:<br>
+&nbsp;&nbsp; statement(s)<br>
+&nbsp;&nbsp; if expression2:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; statement(s)<br>
+&nbsp;&nbsp; elif expression3:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; statement(s)<br>
+&nbsp;&nbsp; else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; statement(s)<br>
+elif expression4:<br>
+&nbsp;&nbsp; statement(s)<br>
+else:<br>
+&nbsp;&nbsp; statement(s)</p>
+
+<p>Example:<br>
+#!/usr/bin/python<br>
+var = 100<br>
+if var &lt; 200:<br>
+&nbsp;&nbsp; print "Expression value is less than 200"<br>
+&nbsp;&nbsp; if var == 150:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Which is 150"<br>
+&nbsp;&nbsp; elif var == 100:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Which is 100"<br>
+&nbsp;&nbsp; elif var == 50:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Which is 50"<br>
+elif var &lt; 50:<br>
+&nbsp;&nbsp; print "Expression value is less than 50"<br>
+else:<br>
+&nbsp;&nbsp; print "Could not find true expression"<br>
+print "Good bye!"</p>
+
+<p>When the above code is executed, it produces following result:<br>
+Expression value is less than 200<br>
+Which is 100<br>
+Good bye!</p>
+
+<p><strong>Problem statement</strong><br>
+Create a program with python that calculate the cost for shipping.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>#!/usr/bin/python<br>
+total = int(raw_input('What is the total amount for your online shopping?'))<br>
+country = raw_input('Shipping within the US or Canada?')<br>
+&nbsp;&nbsp; &nbsp;if country == "US":<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; if total &lt;= 50:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $6.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; elif total &lt;= 100:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $9.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; elif total &lt;= 150:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $12.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; else:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "FREE"<br>
+&nbsp;&nbsp; &nbsp;if country == "Canada":<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; if total &lt;= 50:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $8.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; elif total &lt;= 100:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $12.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; elif total &lt;= 150:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Shipping Costs $15.00"<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; else:<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "FREE"</p>
+
+          
+                  <div class="pull-right">
+                    <a href="/python/pp_5" title="Practise Problems"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">Practise Problems</div> </a>
+                    <a href="/python/pp_5" title="Practise Problems"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>
+				  </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+                

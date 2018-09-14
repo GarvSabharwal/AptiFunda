@@ -1,0 +1,156 @@
+	<% include ../header %>
+	<main style="padding-top:85px;">
+			<!--Main layout-->
+		
+			<div class="container">
+
+	<!--Page heading-->
+			
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="h3-responsive"> 
+							<small class="text-muted">Learn Python Programming</small>
+						</h3>
+					
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/">Home</a></li>
+							<li class="breadcrumb-item"><a href="/python">Pyhton</a></li>
+							<li class="breadcrumb-item active">Variables and Literals</li>
+						</ol>
+				
+					</div>
+				</div>
+
+				<div class="row">
+					<!--First column-->
+					<div class="col-md-3 unit-section">
+						<!--Card-->
+						<div class="card  z-depth-2">
+					
+						<!--Card Gradient-->
+							<div class="gradient" style="height:80px;padding-top:20px;">
+										 Index
+							
+									<div class="mask"></div>
+							
+							</div>
+							<!--/.Card Gradient---->
+
+							<!--Card content-->
+	<div class="card-block pad" >
+	<div class="row ">
+	
+	<div class="col-md-12">
+
+			<p ><a href="/python/data_types" title="Basic Data Types">4.1. Basic Data types </a></p>
+			<p><a href="/python/variables_literals" style="color:#356BC3;" title="Variables and Literals">4.2. Variables and Literals</a></p>
+			<p><a href="/python/more_on_strings" title="More on strings">4.3. More on strings</a></p>
+			<p><a href="/python/type_conversion" title="Type conversions">4.4. Type conversions</a></p>
+			<p><a href="/python/pp_3" title="Practise Problems">4.5. Practise Problems</a></p>
+	</div>
+
+							
+							
+                            </div>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+				<div class="col-md-9" >
+				<div class="card  z-depth-2" >
+				
+				<div style="margin:10px 0px 0px 10px;">
+
+                  <h3 class="h3-responsive"> 
+                        <small class="text-muted">4.2. Variables and Literals</small>
+                    </h3>
+				<hr>
+                  <p><strong>Variable:</strong><br>
+Variable is a location in the memory where the value can be stored and the value can be change in time depending on the conditions or information passed to the program.</p>
+
+<p><strong>Literal:</strong><br>
+Literal is a value or information provided to the variable.</p>
+
+<p>Ex: In expression x=3<br>
+x is a variable,3 is a literal.</p>
+
+<p>Important points about variable assignment and its usage:</p>
+
+<p>1. Declaration of variables is not required in Python. If there is need of a variable, you think of a name and start using it as a variable.<br>
+For example we can write a program as shown,<br>
+x=2<br>
+print x<br>
+prints 2 as output</p>
+
+<p>2. Value of a variable may change during program execution and even the type can be changed. For example,you can assign an integer value to a variable, use it as an integer for a while and then assign a string to the variable.</p>
+
+<p>3. keywords cannot be used as variable names.<br>
+List of keywords in python:<br>
+****************************************************************************************<br>
+and&nbsp;&nbsp;&nbsp;&nbsp; del&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; not&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while&nbsp;&nbsp; as&nbsp;&nbsp;&nbsp; elif&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; global&nbsp;&nbsp;&nbsp; or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with&nbsp;&nbsp;&nbsp; assert&nbsp;&nbsp;&nbsp; else&nbsp;&nbsp;&nbsp;&nbsp; if&nbsp;&nbsp;&nbsp;&nbsp; pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yield&nbsp; break&nbsp;&nbsp;&nbsp;&nbsp; except&nbsp;&nbsp;&nbsp; import&nbsp;&nbsp;&nbsp; print class&nbsp;&nbsp;&nbsp;&nbsp; exec&nbsp;&nbsp;&nbsp; in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; raise&nbsp;&nbsp; continue&nbsp; finally&nbsp;&nbsp; is&nbsp;&nbsp; return&nbsp;&nbsp;&nbsp; def&nbsp;&nbsp;&nbsp; for&nbsp;&nbsp;&nbsp; lambda&nbsp;&nbsp;&nbsp; try<br>
+****************************************************************************************</p>
+
+<p>Python is a dynamic language. It changes during time. The list of keywords may change in the future.</p>
+
+<p>To check the keywords of python version that you are working on use this statement,<br>
+print keyword.kwlist<br>
+keyword.iskeyword(s) returns true if s is a keyword.</p>
+
+<p>Sample example to expain about first two points,<br>
+i = 42&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# data type is implicitely set to integer<br>
+i = 42 + 0.11&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# data type is changed to float<br>
+i = "string"&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# and now it will be a string &nbsp;</p>
+
+<p>Consider the assignment shown below,<br>
+x=3<br>
+y=x<br>
+y=2</p>
+
+<p>The first assignment is unproblematic: Python chooses a memory location for x and saves the integer value 3. The second assignment is more worthwhile:</p>
+
+<p>Intuitively, you may assume that Python will find another location for the variable y and will copy the value of 3 in this place. But Python goes his own way, which differs from our intuition and the ways of C and C++. As both variables will have the same value after the assignment, Python lets y point to the memory location of x.</p>
+
+<p>The critical question arises in the next line of code. Y will be set to the integer value</p>
+
+<p>What will happen to the value of x? C programmers will assume, that x will be changed to 2 as well, because we said before, that y "points" to the location of x. But this is not a C-pointer. Because x and y will not share the same value anymore, y gets his or her own memory location, containing 2 and x sticks to 3, as can be seen in the animated graphics on the right side.</p>
+
+<p>But what we said before can't be determined by typing in those three lines of code. But how can we prove it? The identity function id() can be used for this purpose. Every instance (object or variable) has an identity, i.e. an integer which is unique within the script or program, i.e. other objects have different identities.</p>
+
+<p>So, let's have a look at our previous example and how the identities will change:</p>
+
+<p>#!/usr/bin/python<br>
+x = 3<br>
+print id(x)<br>
+157379912<br>
+y=x<br>
+print id(y)<br>
+157379912<br>
+y=2<br>
+print id(y)<br>
+157379924<br>
+You can see the change in id for y=2.</p>
+
+<p><strong>Note:</strong> id() is an operator used to find the location of variable.</p>
+
+                    <div class="pull-left">
+                    <a href="/python/data_types" title="Basic Data types"><span class="hidden-xs"><i class="fa fa-angle-left"></i> Previous <div class="hidden-xs"> Basic Data types</div></span></a>
+                    <a href="/python/data_types" title="Basic Data types"><div class="btn btn-primary btn-sm visible-xs"><i class="fa fa-angle-left"></i> Previous </div></a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="/python/more_on_strings" title="More on strings"><span class="pull-right hidden-xs">Next <i class="fa fa-angle-right"></i> </span>    <div style="clear: right;" class="hidden-xs text-right">More on strings</div> </a>
+                    <a href="/python/more_on_strings" title="More on strings"><div class="btn btn-sm btn-primary pull-right visible-xs">Next <i class="fa fa-angle-right"></i> </div></a>
+                  </div>    
+                     </div>   
+					
+                    </div>
+             </div>
+				
+	
+		</div>
+</main>
+<% include ../footer %>
+
+
+
